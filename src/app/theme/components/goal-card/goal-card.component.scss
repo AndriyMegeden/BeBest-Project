@@ -1,0 +1,321 @@
+.goal-card {
+  width: 100%;
+  height: auto;
+  background: var(--dark-ocean);
+  border-radius: 12px;
+  padding: 20px;
+  .health {
+    .icon-with-text{
+      width: 80%;
+      .health-text {
+        width: 100%;
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+    .color {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ion-icon {
+        width: 23px;
+        height: 23px;
+        font-size: 27px;
+      }
+      &.purple {
+        background: var(--purple);
+      }
+      &.blue {
+        background: var(--blue);
+      }
+      &.orange {
+        background: var(--orange);
+      }
+      &.red {
+        background: var(--red);
+      }
+      &.primary {
+        background: var(--primary);
+      }
+      &.ocean {
+        background: var(--ocean);
+      }
+      &.yellow {
+        background: var(--yellow);
+      }
+      &.pink {
+        background: var(--pink);
+      }
+      &.violet {
+        background: var(--violet);
+      }
+      &.green {
+        background: var(--green);
+      }
+    }
+    .health-bubble {
+      width: 42px;
+      height: 42px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    .health-checkbox {
+      ion-checkbox {
+        --border-color: var(--white);
+        width: 36px;
+        height: 36px;
+        --background: none;
+      }
+    }
+  }
+  .text-icon {
+    .icon-wrapper {
+      min-width: 29px;
+      height: 29px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title-subtitle-wrap{
+      width: 95%;
+      .title {
+       
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+        .subtitle{
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+    
+  }
+  .progress {
+    .progress-wrapper {
+      .strip {
+        width: 100%;
+        height: 8px;
+        border-radius: 24px;
+        background: var(--white-opacity);
+        .strip-progress {
+          z-index: 1;
+          height: 8px;
+          border-radius: 24px;
+          background: var(--primary);
+        }
+      }
+      .text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+      .number {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+    .button {
+      ion-button {
+        --background: var(--ocean);
+        width: 96px;
+        height: 45px;
+        --border-radius: 12px;
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 17px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .goal-card {
+    .health {
+      .icon-with-text{
+        width: 74%;
+        .health-text {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .color{
+        width: 44px;
+        height: 44px;
+      }
+      .health-bubble {
+        width: 37px;
+        height: 37px;
+      }
+      
+      .health-checkbox {
+        ion-checkbox {
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+    .text-icon {
+      .icon-wrapper {
+        min-width: 24px;
+        height: 24px;
+      }
+      .title-subtitle-wrap{
+        .title {
+     
+          span {
+            font-size: 16px;
+          }
+          .subtitle{
+            font-size: 16px;
+          }
+        }
+        
+      }
+      
+    }
+    .progress {
+      .progress-wrapper {
+        .strip {
+          width: 100%;
+          height: 6px;
+
+          .strip-progress {
+            height: 6px;
+          }
+        }
+        .text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .number {
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+      .button {
+        ion-button {
+          width: 91px;
+          height: 40px;
+
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .goal-card {
+    .health {
+      .icon-with-text{
+        width: 70%;
+        .health-text {
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+      .health-bubble {
+        width: 37px;
+        height: 37px;
+      }
+      
+      .health-checkbox {
+        ion-checkbox {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .text-icon {
+      .title-subtitle-wrap{
+        .title {
+        
+          span {
+            font-size: 14px;
+          }
+          .subtitle{
+            font-size: 14px;
+          }
+        }
+      }
+     
+    }
+    .progress {
+      .progress-wrapper {
+        .strip {
+          width: 100%;
+          height: 6px;
+
+          .strip-progress {
+            height: 6px;
+          }
+        }
+        .text {
+          span {
+            font-size: 14px;
+          }
+        }
+        .number {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      .button {
+        ion-button {
+          width: 91px;
+          height: 40px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

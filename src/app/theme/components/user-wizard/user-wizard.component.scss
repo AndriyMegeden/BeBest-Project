@@ -1,0 +1,433 @@
+form {
+  ion-input {
+    margin-left: 0px;
+  }
+  .navbar {
+    ion-icon {
+      width: 52px;
+      height: 52px;
+    }
+    .title {
+      margin-left: 70px;
+      white-space: nowrap;
+      width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--white);
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37px;
+        letter-spacing: -0.01em;
+      }
+    }
+    .text {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+  .inputs-wrapper {
+    .text {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+    }
+    .input {
+      .warning{
+        font-family: Urbanist;
+        color: var(--white);
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
+      }
+      ion-item {
+        ion-icon {
+          width: 28px;
+          height: 28px;
+        }
+        .select {
+          width: 80%;
+        }
+        ion-datetime-button::part(native) {
+          background: none;
+          color: var(--white);
+        }
+      }
+    }
+  }
+  .upload-foto {
+    .avatar {
+      width: 88px;
+      height: 88px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+    .foto-button {
+      position: relative;
+      ion-button {
+        width: auto;
+        height: 40px;
+        --border-radius: 12px;
+        --background: var(--primary);
+        .iocn {
+          width: 20px;
+          height: 20px;
+          .photo {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .upload-span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 17px;
+          letter-spacing: 0px;
+        }
+      }
+      input {
+        position: absolute;
+        width: 136px;
+        height: 40px;
+        z-index: 10;
+        opacity: 0;
+      }
+    }
+  }
+  .inputs-wrapper {
+    .text {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+    }
+    .input {
+      ion-item {
+        ion-icon {
+          width: 28px;
+          height: 28px;
+        }
+        .select {
+          width: 80%;
+        }
+      }
+    }
+  }
+  .inputs-wrapper {
+    .text {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+    }
+    .input {
+      ion-item {
+        ion-icon {
+          width: 28px;
+          height: 28px;
+        }
+        .select {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .inputs-social {
+    .text {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+    }
+    .input {
+      .warning{
+        font-family: Urbanist;
+        color: var(--white);
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
+      }
+      ion-item {
+        ion-input {
+          ion-label {
+            color: var(--white);
+            font-family: Urbanist;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  form {
+    .navbar {
+      ion-icon {
+        width: 50px;
+        height: 50px;
+      }
+      .title {
+        margin-left: 0px;
+        width: 200px;
+        span {
+          font-size: 30px;
+        }
+      }
+      .text {
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+    .inputs-wrapper {
+      .text {
+        span {
+          font-size: 16px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-icon {
+            width: 26px;
+            height: 26px;
+          }
+          .select {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .upload-foto {
+      .avatar {
+        ion-icon {
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      ion-button {
+        width: 132px;
+        height: 40px;
+
+        .iocn {
+          width: 18px;
+          height: 18px;
+          .photo {
+            width: 18px;
+            height: 18px;
+          }
+        }
+        .upload-span {
+          font-size: 16px;
+        }
+      }
+    }
+    .inputs-wrapper {
+      .text {
+        span {
+          font-size: 16px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-icon {
+            width: 26px;
+            height: 26px;
+          }
+          .select {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .inputs-wrapper {
+      .text {
+        span {
+          font-size: 16px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-icon {
+            width: 26px;
+            height: 26px;
+          }
+          .select {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    .inputs-social {
+      .text {
+        span {
+          font-size: 16px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-input {
+            ion-label {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  form {
+    .navbar {
+      ion-icon {
+        width: 48px;
+        height: 48px;
+      }
+      .title {
+        margin-left: 0px;
+        width: 175px;
+        span {
+          font-size: 26px;
+        }
+      }
+      .text {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .inputs-wrapper {
+      .text {
+        span {
+          font-size: 14px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-icon {
+            width: 24px;
+            height: 24px;
+          }
+          .select {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .upload-foto {
+      .avatar {
+        ion-icon {
+          width: 88px;
+          height: 88px;
+        }
+      }
+
+      ion-button {
+        width: 128px;
+        height: 40px;
+
+        .iocn {
+          width: 16px;
+          height: 16px;
+          .photo {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        .upload-span {
+          font-size: 14px;
+        }
+      }
+    }
+    .inputs-wrapper {
+      .text {
+        span {
+          font-size: 14px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-icon {
+            width: 24px;
+            height: 24px;
+          }
+          .select {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .inputs-wrapper {
+      .text {
+        span {
+          font-size: 14px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-icon {
+            width: 24px;
+            height: 24px;
+          }
+          .select {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    .inputs-social {
+      .text {
+        span {
+          font-size: 14px;
+        }
+      }
+      .input {
+        ion-item {
+          ion-input {
+            ion-label {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

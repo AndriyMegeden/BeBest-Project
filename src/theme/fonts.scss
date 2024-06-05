@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: 'Urbanist'; /* название, которое вы хотите использовать для шрифта */
+  src: url('../assets/fonts/Urbanist-VariableFont_wght.ttf') format('truetype'); /* путь к вашему файлу шрифта */
+  /* другие свойства шрифта, такие как font-weight и font-style, если требуется */
+}
+
+@font-face {
+  font-family: 'DMSans'; /* название, которое вы хотите использовать для шрифта */
+  src: url('../assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype'); /* путь к вашему файлу шрифта */
+  /* другие свойства шрифта, такие как font-weight и font-style, если требуется */
+}
+
+@font-face {
+  font-family: 'Rubik'; /* название, которое вы хотите использовать для шрифта */
+  src: url('../assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype'); /* путь к вашему файлу шрифта */
+  /* другие свойства шрифта, такие как font-weight и font-style, если требуется */
+}

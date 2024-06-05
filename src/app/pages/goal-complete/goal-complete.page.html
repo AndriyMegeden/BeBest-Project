@@ -1,0 +1,10 @@
+<div [ngClass]="{'safe--area': isIOS}" class="save">
+  <ion-content>
+    <app-main-layout>
+      <app-goal-view-success
+      [goal]="goal"
+      (onShare)="shareScreenshot($event)"
+      ></app-goal-view-success>
+    </app-main-layout>
+  </ion-content>
+</div>

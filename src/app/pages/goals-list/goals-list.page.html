@@ -1,0 +1,21 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button title="particals.back_button.goals_list_title"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <app-list-switcher
+    [selectedValue]="$selectedValue.asObservable()"
+    [options]="goalStatuses"
+    (onGetValue)="getGoalsByStatus($event)"
+    ></app-list-switcher>
+    <ng-container *ngFor="let goal of goals">
+      <app-goal-card 
+      [goal]="goal"
+      ></app-goal-card>
+    </ng-container>
+  </app-main-layout>
+</ion-content>

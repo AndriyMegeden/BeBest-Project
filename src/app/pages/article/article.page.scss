@@ -1,0 +1,12 @@
+app-back-button {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  height: 76px;
+  &.safe--area {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 20px;
+  }
+}

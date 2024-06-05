@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <ion-header mode="ios">
+    <ion-toolbar class="header">
+      <ion-title>
+        <app-add-goal-control></app-add-goal-control>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <app-main-layout [navbar]="true">
+    <app-slider-layout>
+      <ng-container *ngFor="let goal of chartGoalProgress">
+        <ion-slide>
+          <app-doughnut-chart-day
+            [goal]="goal"
+            class="m-r-10"
+          ></app-doughnut-chart-day>
+        </ion-slide>
+      </ng-container>
+    </app-slider-layout>
+    <app-list-layout
+      [config]="goalsLayoutConfig"
+      [emptyScreenGoals]="emptyScreenGoals.asObservable()"
+      [emptyScreenProgress]="emptyScreenProgress.asObservable()"
+      [emptyScreenProgressNoGoals]="emptyScreenProgressNoGoals.asObservable()"
+    >
+      <ng-container *ngFor="let goal of mainGoalProgress">
+        <ng-container *ngIf="!goal.goalCompleted">
+          <app-goal-category
+            [mainPage]="true"
+            [color]="goal.goalCategoryColor"
+            [id]="goal.goalCategoryName"
+            [goalName]="goal.goalName"
+            (onGetToggle)="completedGoalModal(goal)"
+          ></app-goal-category>
+        </ng-container>
+      </ng-container>
+    </app-list-layout>
+    <ng-container *ngIf="categories.length">
+      <app-list-layout [config]="contentLayoutConfig">
+        <div class="cards">
+          <div class="all-cards d-flex d-wrap justify-space-between">
+            <ng-container *ngFor="let category of categories">
+              <app-content-card
+                [title]="category.categoryTitle"
+                [subtitle]="category.categorySubtitle"
+                [lock]="category.lock"
+                [thumbnail]="category.categoryImage"
+                (click)="navigate(category)"
+              ></app-content-card>
+            </ng-container>
+          </div>
+        </div>
+      </app-list-layout>
+    </ng-container>
+  </app-main-layout>
+</ion-content>

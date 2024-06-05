@@ -1,0 +1,38 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <app-back-button [disabled]="true" (click)="dismiss()" [title]="'particals.back_button.add_own_category_title'"></app-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" class="container">
+    <div class="content">
+      <div class="input-wrapper m-b-20">
+        <div class="text">
+          <span translate>modals.modal_add_category.name</span>
+        </div>
+        <ion-item>
+          <ion-input 
+          [placeholder]="'modals.modal_add_category.name' | translate"
+          formControlName="categoryName"
+          ></ion-input>
+        </ion-item>
+      </div>
+      <div class="color-name m-b-10">
+        <span translate>modals.modal_add_category.color</span>
+      </div>
+      <div class="color-wrapper m-b-10">
+        <div class="color-first d-flex d-wrap m-b-20">
+          <ng-container *ngFor="let color of colors">
+            <ion-button [className]="'color ' + color" fill="clear" (click)="setValue(color)" vibrate>
+              <ion-icon *ngIf="form.get('categoryColor').value === color" src="/assets/icons/general/check.svg"></ion-icon>
+            </ion-button>
+          </ng-container>
+        </div>
+      </div>
+      <div class="button">
+        <ion-button [disabled]="!form.valid" (click)="getData()" translate vibrate> modals.modal_add_category.add </ion-button>
+      </div>
+    </div>
+  </form>
+</ion-content>

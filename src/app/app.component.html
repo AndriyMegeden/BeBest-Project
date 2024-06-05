@@ -1,0 +1,10 @@
+<ion-app>
+  <ion-content class="container">
+    <ion-router-outlet [hidden]="!showContent"></ion-router-outlet>
+  </ion-content>
+  <ion-footer mode="ios" [hidden]="!navbar" class="absolute">
+    <ion-toolbar class="footer">
+      <app-bottom-menu></app-bottom-menu>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>

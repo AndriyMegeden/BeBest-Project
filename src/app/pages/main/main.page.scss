@@ -1,0 +1,12 @@
+.container-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+ion-slide {
+  width: auto;
+  max-width: 100px;
+  margin-left: 5px;
+  margin-right: 5px !important;
+}

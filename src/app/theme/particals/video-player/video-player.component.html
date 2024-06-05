@@ -1,0 +1,40 @@
+<div class="position-video d-flex justify-center">
+  <div class="video-management w-100 p-relative">
+    <div class="controlls-button p-absolute w-100">
+      <div class="controlls-wrapper w-100  d-flex justify-center align-center">
+        <ion-button mode="ios" class="arrow-button2" fill="clear" (click)="prev()">
+          <ion-icon class="arrow2" src="/assets/icons/general/rewind-back.svg"></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" class="play-button m-lr-24" fill="clear" (click)="videoPlayingAction === 'pause' ? pause() : play()">
+           <ion-icon class="play-video w-100"
+            [src]="'/assets/icons/general/player-' + videoPlayingAction + '.svg'"
+           ></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" class="arrow-button1" fill="clear" (click)="next()">
+          <ion-icon class="arrow1" src="/assets/icons/general/rewind-forward.svg"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div class="bottom-controlls p-absolute d-flex align-end w-100">
+      <div class="controlls-container p-lr-24 p-relative d-flex align-end flex-d-col w-100">
+        <div class="time-width-buttons align-center d-flex w-100 justify-space-between">
+          <div class="time">
+            <span>{{ formattedCurrentTime }} / {{ formattedDuration }}</span>
+          </div>
+          <div class="buttons align-center d-flex">
+            <ion-button class="button m-r-16">
+            </ion-button>
+            <ion-button class="button" fill="clear" (click)="toggleFullScreen()">
+              <div class="full-screen">
+                <ion-icon src="/assets/icons/general/full-video.svg"></ion-icon>
+              </div>
+            </ion-button>
+          </div>
+        </div>
+        <ion-range aria-label="Temperature" [min]="0" [value]="currentTime" [max]="duration"></ion-range>
+      </div>
+    </div>
+    <!-- <video #videoPlayer></video> -->
+    <div #videoPlayer class="player"></div>
+  </div>
+</div>

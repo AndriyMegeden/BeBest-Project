@@ -1,0 +1,22 @@
+@import "./variables-ionic.scss";
+
+:root {
+  --white: hsla(0, 0%, 100%, 1);
+  --background: #2f3951;
+  --white-opacity: hsla(0, 0%, 100%, 0.7);
+  --ocean: #2A8AA3;
+  --dark: hsla(227, 57%, 12%, 1);
+  --primary: #2079FF;
+  --dark-ocean: hsla(202, 58%, 31%, 1);
+  --yellow:  #E9D628;
+  --purple: #9CB1FB;
+  --blue: #7FE3F0;
+  --orange: #FCB96D;
+  // --yellow2: hsla(54, 82%, 54%, 1);
+  --red: #F2795A;
+  --pink: #FF88E5;
+  --violet: #567BFF;
+  --green: #65BD6D;
+  --gray: rgb(152, 152, 152);
+  --black: black;
+}

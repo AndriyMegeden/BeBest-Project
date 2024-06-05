@@ -1,0 +1,37 @@
+
+<ion-item class="m-b-20">
+  <div class="goals-for-today">
+    <div class="health d-flex align-center justify-space-between p-tb-10">
+      <div class="health-bubble m-lr-20 sm-m-lr-15">
+        <ng-container *ngIf="categories.includes(id) else elseTemplate">
+          <div [className]="'color ' + color">
+            <ion-icon [src]="'/assets/icons/category/' + id + '.svg'"></ion-icon>
+          </div>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <div [className]="'color ' + color">
+            <ion-icon [src]="'/assets/icons/category/your.svg'"></ion-icon>
+          </div>
+        </ng-template>
+      </div>
+      <div class="health-text">
+        
+        <ng-container *ngIf="mainPage; else elseTextTemplate">
+          <span> {{ goalName }} </span>
+        </ng-container>
+        <ng-template #elseTextTemplate>
+          <span> {{ 'other.categories.' + id | translate }} </span>
+        </ng-template>
+      </div>
+      
+      <div class="health-arrow m-lr-20 sm-m-lr-15">
+        <ng-container *ngIf="!defaultEvent; else elseToggleTemplate">
+          <ion-checkbox mode="ios" (click)="getToggle($event)" [checked]="itemValue"></ion-checkbox>
+        </ng-container>
+        <ng-template #elseToggleTemplate>
+          <ion-checkbox mode="ios" (ionChange)="getToggle($event)" [checked]="defaultValue"></ion-checkbox>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</ion-item>

@@ -1,0 +1,15 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-head-title title="particals.back_button.settings"></app-head-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout [navbar]="true">
+    <app-user-settings
+    (onLogout)="logout()"
+    (onDeleteAccount)="deleteAccount()"
+    ></app-user-settings>
+  </app-main-layout>
+</ion-content>

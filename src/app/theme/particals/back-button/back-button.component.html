@@ -1,0 +1,37 @@
+<div class="upper-part-wrapper w-100 d-flex justify-center">
+  <div class="upper-part d-flex align-center">
+    <div class="arrow-title d-flex align-center">
+      <div class="arrow m-r-10" (click)="backTo()">
+        <ion-icon src="/assets/icons/general/back.svg"></ion-icon>
+      </div>
+      <div class="title">
+        <span> {{ title | translate }} </span>
+      </div>
+    </div>
+    <ng-container *ngIf="settings">
+      <div class="settings">
+        <ion-icon src="/assets/icons/general/menu-dot.svg"> </ion-icon>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="controls">
+      <div class="icons">
+        <ion-icon
+          class="icon-pen"
+          src="/assets/icons/general/pen.svg"
+          (click)="edit()"
+        ></ion-icon>
+        <ng-container *ngIf="!archiveStatus">
+          <ion-icon 
+          src="/assets/icons/general/archive.svg"
+          (click)="archive()"
+        ></ion-icon>
+        </ng-container>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="all">
+      <div class="all">
+        <span routerLink="/goals-list" translate> particals.back_button.all </span>
+      </div>
+    </ng-container>
+  </div>
+</div>

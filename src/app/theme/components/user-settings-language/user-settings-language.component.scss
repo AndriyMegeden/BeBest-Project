@@ -1,0 +1,140 @@
+.language-page {
+  .search-part {
+    ion-item {
+      border: none;
+      --background: none;
+      --padding-start: 0px;
+      --inner-padding-end: 0px;
+      --border-style: none;
+      ion-input {
+        background: var(--dark);
+        border: 1px solid;
+        border-radius: 20px;
+        --box-shadow: none;
+        width: 100%;
+        height: 56px;
+        font-family: DMSans;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0.008em;
+        text-align: left;
+        ion-icon {
+          width: 30px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  ion-item{
+    border: none;
+    .toggle {
+      width: 100%;
+      .radio{
+        width: 25px;
+        height: 25px;
+        ion-radio{
+          margin: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .horisontal-bar {
+        width: 100%;
+        height: 1px;
+        background: var(--white-opacity);
+      }
+      .toggle-info {
+        height: 47px;
+        .text {
+          span {
+            color: var(--white);
+            font-family: Urbanist;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0.008em;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .language-page {
+    .search-part {
+      ion-item {
+        ion-input {
+          width: 100%;
+          height: 56px;
+
+          font-size: 18px;
+
+          ion-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    ion-item{
+      .toggle {
+        .horisontal-bar {
+          width: 100%;
+          height: 1px;
+        }
+        .toggle-info {
+          height: 47px;
+          .text {
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+   
+  }
+}
+
+@media (max-width: 425px) {
+  .language-page {
+    .search-part {
+      ion-item {
+        ion-input {
+          width: 100%;
+          height: 56px;
+          font-size: 16px;
+        }
+      }
+    }
+    ion-item{
+      .toggle {
+        .radio{
+          width: 20px;
+          height: 20px;
+          ion-radio{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .horisontal-bar {
+          width: 100%;
+          height: 1px;
+        }
+        .toggle-info {
+          height: 47px;
+          .text {
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

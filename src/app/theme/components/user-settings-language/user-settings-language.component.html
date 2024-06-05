@@ -1,0 +1,29 @@
+<div class="language-page">
+  <div class="search-part m-b-15">
+    <ion-item lines="none">
+      <ion-input [placeholder]="'component.language.search' | translate">
+        <ion-icon
+          class="m-lr-10"
+          src="/assets/icons/general/icon-search.svg"
+        ></ion-icon>
+      </ion-input>
+    </ion-item>
+  </div>
+  <ion-radio-group mode="md" (ionChange)="changeLang($event)" [value]="currentLang">
+    <ng-container *ngFor="let language of languages">
+      <ion-item>
+        <div class="toggle">
+          <div class="toggle-info d-flex justify-space-between align-center">
+            <div class="text">
+              <span>{{ 'other.languages.' + language | translate }}</span>
+            </div>
+            <div class="radio">
+              <ion-radio [value]="language"></ion-radio>
+            </div>
+          </div>
+          <div class="horisontal-bar"></div>
+        </div>
+      </ion-item>
+    </ng-container>
+  </ion-radio-group>
+</div>

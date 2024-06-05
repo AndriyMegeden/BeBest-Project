@@ -1,0 +1,407 @@
+.content {
+  .upper-part {
+    position: absolute;
+    ion-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .head-icon {
+    img {
+      width: 92px;
+      height: 92px;
+    }
+  }
+  .head-icon2 {
+    ion-icon {
+      width: 140px;
+      height: 140px;
+    }
+  }
+  .content-title-wrapper {
+    height: 70px;
+    .title {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 31px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+    }
+    .subtitle {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+    }
+  }
+  .inputs-wrapper {
+    .inputs {
+      height: auto;
+      min-height: 100px;
+      .input-name {
+        color: var(--white);
+        height: 28px;
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+      .ion-input {
+        .warning {
+          font-family: Urbanist;
+          color: var(--white);
+          height: auto;
+          width: 90%;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+    .recovery-inputs {
+      ion-item {
+        --padding-start: 0px;
+        --inner-padding-end: 0px;
+        --border-style: none;
+        width: 23.5%;
+        ion-input {
+          border-radius: 12px;
+          height: 66px;
+          width: 74px;
+          margin: 0 8px;
+          text-align: center;
+          -webkit-tach-appearance: none;
+          --appearance: none;
+        }
+      }
+      .input-name {
+        color: var(--white);
+        height: 38px;
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+    }
+  }
+  .licence-wrapper {
+    .licence {
+      width: 400px;
+      height: auto;
+      .licence-icon {
+        width: 47px;
+        ion-checkbox {
+          width: 42px;
+          height: 42px;
+          --border-radius: 100px;
+          --border-color: var(--white);
+        }
+      }
+      .licence-text {
+        font-family: Urbanist;
+        span {
+          color: var(--white);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          a {
+            color: var(--ocean);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .sign-up-button {
+    ion-button {
+      font-family: Urbanist;
+      height: 56px;
+      --border-radius: 12px;
+      --background: #2079ff;
+      span {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 19.2px;
+        text-align: center;
+      }
+    }
+  }
+  .networks {
+    .networks-icons {
+      max-width: 250px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      ion-icon {
+        width: 74px;
+        height: 74px;
+        margin: 0 auto;
+      }
+    }
+    height: 230px;
+    .networks-title {
+      color: var(--white-opacity);
+      font-family: Urbanist;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21px;
+    }
+    .networks-subtitle {
+      color: var(--white-opacity);
+      font-family: Urbanist;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21px;
+      span {
+        color: var(--white-opacity);
+        a {
+          color: var(--ocean);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .forgot-password {
+    color: var(--white);
+    height: 27px;
+    font-family: Urbanist;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+}
+@media (max-width: 576px) {
+  .content {
+    .upper-part {
+      position: absolute;
+      ion-icon {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .head-icon {
+      ion-icon {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .head-icon2 {
+      ion-icon {
+        width: 135px;
+        height: 135px;
+      }
+    }
+    .content-title-wrapper {
+      height: 65px;
+      .title {
+        span {
+          font-size: 29px;
+        }
+      }
+      .subtitle {
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+    .inputs-wrapper {
+      .inputs {
+        .input-name {
+          height: 26px;
+
+          font-size: 16px;
+        }
+      }
+      .recovery-inputs {
+        ion-item {
+          width: 22.5%;
+          ion-input {
+            height: 61px;
+            width: 69px;
+            margin: 0 8px;
+          }
+        }
+        .input-name {
+          height: 28px;
+
+          font-size: 16px;
+        }
+      }
+    }
+    .licence-wrapper {
+      .licence {
+        width: 350px;
+        .licence-icon {
+          width: 42px;
+          ion-checkbox {
+            width: 37px;
+            height: 37px;
+          }
+        }
+        .licence-text {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .sign-up-button {
+      ion-button {
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .networks {
+      .networks-icons {
+        ion-icon {
+          width: 69px;
+          height: 69px;
+        }
+      }
+      height: 225px;
+      .networks-title {
+        font-size: 16px;
+      }
+      .networks-subtitle {
+        font-size: 16px;
+      }
+    }
+    .forgot-password {
+      height: 22px;
+
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .content {
+    .upper-part {
+      position: absolute;
+      ion-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .head-icon {
+      ion-icon {
+        width: 88px;
+        height: 88px;
+      }
+    }
+    .head-icon2 {
+      ion-icon {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    .content-title-wrapper {
+      height: 60px;
+      .title {
+        span {
+          font-size: 27px;
+        }
+      }
+      .subtitle {
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+    .inputs-wrapper {
+      .inputs {
+        .input-name {
+          height: 22px;
+
+          font-size: 14px;
+        }
+      }
+      .recovery-inputs {
+        ion-item {
+          width: 21.5%;
+          ion-input {
+            height: 56px;
+            width: 64px;
+            margin: 0 8px;
+          }
+        }
+        .input-name {
+          height: 28px;
+
+          font-size: 14px;
+        }
+      }
+    }
+    .licence-wrapper {
+      .licence {
+        width: 320px;
+        .licence-icon {
+          width: 37px;
+          ion-checkbox {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        .licence-text {
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .sign-up-button {
+      ion-button {
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+    .networks {
+      .networks-icons {
+        .apple {
+          display: none;
+          ion-icon {
+            width: 64px;
+            height: 64px;
+          }
+          &.apple-auth {
+            display: block;
+            ion-icon {
+              width: 64px;
+              height: 64px;
+            }
+          }
+        }
+        ion-icon {
+          width: 64px;
+          height: 64px;
+        }
+      }
+      height: 220px;
+      .networks-title {
+        font-size: 14px;
+      }
+      .networks-subtitle {
+        font-size: 14px;
+      }
+    }
+    .forgot-password {
+      height: 17px;
+
+      font-size: 14px;
+    }
+  }
+}

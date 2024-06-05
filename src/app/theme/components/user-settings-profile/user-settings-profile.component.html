@@ -1,0 +1,47 @@
+<div class="profile">
+  <div class="avatar d-flex justify-center m-b-15">
+    <ion-avatar>
+      <img [src]="authInfo.avatar ? authInfo.avatar : '/assets/images/default-avatar.png'"/>
+    </ion-avatar>
+    <div class="ion-icon-wrapper d-flex justify-end align-end">
+      <ion-icon src="/assets/icons/general/pen.svg" routerLink="/settings-profile-edit"></ion-icon>
+    </div>
+  </div>
+  <div class="name d-flex justify-center m-b-10">
+    <span> {{ authInfo.firstName }} </span>
+  </div>
+  <div class="target d-flex justify-space-between md-justify-space-arround flex-d-row p-tb-23 p-lr-5 m-b-30">
+    <div class="info d-flex flex-d-col justify-space-between align-center">
+      <div class="number"><span>{{ all }}</span></div>
+      <div class="text"><span translate>component.user_settings_profile.all_target</span></div>
+    </div>
+    <div class="vertical-stick"></div>
+    <div class="info d-flex flex-d-col justify-space-between align-center">
+      <div class="number"><span>{{ completed }}</span></div>
+      <div class="text"><span translate>component.user_settings_profile.done</span></div>
+    </div>
+    <div class="vertical-stick"></div>
+    <div class="info d-flex flex-d-col justify-space-between align-center">
+      <div class="number"><span>{{ inProgress }}</span></div>
+      <div class="text"><span translate>component.user_settings_profile.in_process</span></div>
+    </div>
+  </div>
+  <div class="general">
+    <div class="title m-b-15"><span translate>component.user_settings_profile.general</span></div>
+    <div class="subtitle d-flex align-center m-b-10">
+      <ion-icon class="m-r-10" src="/assets/icons/general/confetti.svg"></ion-icon>
+      <span translate>component.user_settings_profile.date_of_birth</span>
+    </div>
+    <div class="text m-b-10"><span>{{ authInfo.dateBirth | date:"MM/dd/yy"}}</span></div>
+    <div class="subtitle d-flex align-center m-b-10">
+      <ion-icon class="m-r-10" src="/assets/icons/general/buildings.svg"></ion-icon>
+      <span translate>component.user_settings_profile.city_of_birth</span>
+    </div>
+    <div class="text m-b-10"><span>{{ authInfo.location }}</span></div>
+    <div class="subtitle d-flex align-center m-b-10">
+      <ion-icon class="m-r-10" src="/assets/icons/general/letter.svg"></ion-icon>
+      <span translate>component.user_settings_profile.email</span>
+    </div>
+    <div class="text"><span>{{ authInfo.email }}</span></div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button [settings]="false"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <app-audio-player
+    [countMedias]="countMedias"
+    (onShowList)="toggleList($event)"
+    ></app-audio-player>
+   <div [hidden]="!list">
+    <ng-container *ngFor="let media of medias; let index = index">
+      <ng-container *ngIf="index === 0; else elseTemplate">
+        <app-audio-file
+          [id]="index + 1"
+          [isFirst]="true"
+          [media]="media.media"
+          [contentName]="media.contentName"
+          [countMedias]="medias.length"
+        ></app-audio-file>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <app-audio-file
+          [id]="index + 1"
+          [isFirst]="false"
+          [media]="media.media"
+          [contentName]="media.contentName"
+          [countMedias]="medias.length"
+        ></app-audio-file>
+      </ng-template>
+    </ng-container>
+  </div>
+  </app-main-layout>
+</ion-content>

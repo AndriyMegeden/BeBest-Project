@@ -1,0 +1,21 @@
+<div class="graphics d-flex justify-space-between">
+  <div class="graphic-wrapper">
+    <div class="graphic d-flex" [ngClass]="{ active: isActive }">
+      <div class="numb">
+        <span> {{ currentDate }} </span>
+      </div>
+      <div class="text">
+        <span> {{ currentDay }} </span>
+      </div>
+    </div>
+    <div class="chart-wrapper"></div>
+    <div class="chart-container">
+      <ng-container *ngIf="goal.day.length; else elseTemplate">
+        <canvas [id]="'chart-day-' + goal.id"></canvas>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <canvas [id]="'chart-day-default-' + goal.id"></canvas>
+      </ng-template>
+    </div>
+  </div>
+</div>

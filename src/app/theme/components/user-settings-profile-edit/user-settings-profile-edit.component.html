@@ -1,0 +1,159 @@
+<form [formGroup]="form" [style.height]="formHeight">
+  <div class="avatar d-flex justify-center m-b-15">
+    <div class="personal-image ">
+      <label class="label">
+        <input type="file"  accept="image/*;capture=camera" (change)="onFileSelected($event)"/>
+        <figure class="personal-figure">
+          <img class="personal-figure-img"
+          [src]="authInfo.avatar">
+          <figcaption class="personal-figcaption">
+            <img  src="/assets/icons/general/pen.svg">
+          </figcaption>
+        </figure>
+      </label>
+    </div>
+  </div>
+  <div class="inputs-data">
+    <div class="inputs-wrapper">
+      <div class="text m-b-5">
+        <span translate>component.user_settings_profile_edit.phone_number</span>
+      </div>
+      <div class="input m-b-20">
+        <ion-item lines="none">
+          <ion-icon class="p-lr-16" src="/assets/icons/general/confetti.svg"></ion-icon>
+          <ion-input
+            type="text"
+            inputmode="text"
+            [placeholder]="'component.user_settings_profile_edit.phone_number' | translate"
+            formControlName="phoneNumber"
+            phoneMask
+          ></ion-input>
+        </ion-item>
+        <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('phoneNumber')?.invalid && form.get('phoneNumber')?.touched" translate>
+          other.errors.phone_number_vaildation
+        </div>
+      </div>
+    </div>
+    <div class="inputs-wrapper">
+      <div class="text m-b-5"><span translate>component.user_settings_profile_edit.name</span></div>
+      <div class="input m-b-20">
+        <ion-item lines="none">
+          <ion-icon class="p-lr-16" src="/assets/icons/general/user.svg"></ion-icon>
+          <ion-input 
+          type="text"
+          inputmode="text"
+          [placeholder]="'component.user_settings_profile_edit.name' | translate"
+          formControlName="firstName"
+          >
+            
+          </ion-input>
+        </ion-item>
+        <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched" translate>
+          other.errors.validation_firstName
+        </div>
+      </div>
+    </div>
+    <div class="inputs-wrapper">
+      <div class="text m-b-5"><span translate>component.user_settings_profile_edit.date_of_birth</span></div>
+      <div class="input m-b-20">
+        <ion-item lines="none">
+          <ion-icon class="p-l-16 p-r-2" src="/assets/icons/general/confetti.svg"></ion-icon>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+        </ion-item>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime 
+              id="datetime"
+              presentation="date"
+              displayFormat="DD.MM.YYYY"
+              formControlName="dateBirth"
+              [showDefaultButtons]="true"
+            ></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </div>
+    </div>
+    <div class="inputs-wrapper">
+      <div class="text m-b-5"><span translate>component.user_settings_profile_edit.city_of_birth</span></div>
+      <div class="input m-b-30">
+        <ion-item lines="none">
+          <ion-icon class="p-lr-16" src="/assets/icons/general/buildings.svg"></ion-icon>
+          <ion-input 
+            type="text"
+            inputmode="text"
+            formControlName="location"
+            [placeholder]="'component.user_settings_profile_edit.enter_country_city_of_birth' | translate"
+          ></ion-input>
+        </ion-item>
+        <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('location')?.invalid && form.get('location')?.touched" translate>
+          other.errors.at_least
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="social">
+    <div class="title m-b-15"><span translate>component.user_settings_profile_edit.social_networks</span></div>
+    <div class="inputs-social">
+      <div class="text m-b-5"><span translate>component.user_settings_profile_edit.enter_facebook</span></div>
+      <div class="input flex-d-col d-flex justify-center m-b-20">
+        <ion-item lines="none">
+          <ion-icon class="p-lr-16" src="/assets/icons/general/facebook.svg"></ion-icon>
+          <ion-input 
+            type="text"
+            inputmode="text"
+            formControlName="facebook"
+            [placeholder]="'component.user_settings_profile_edit.enter_facebook' | translate"
+            (ionFocus)="onInputFocus()"
+            (ionBlur)="onInputBlur()"
+          ></ion-input>
+        </ion-item>
+        <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('facebook')?.invalid && form.get('facebook')?.touched" translate>
+          other.errors.at_least
+        </div>
+      </div>
+    </div>
+    <div class="inputs-social">
+      <div class="text m-b-5"><span translate>component.user_settings_profile_edit.enter_instagram</span></div>
+      <div class="input flex-d-col d-flex justify-center m-b-20">
+        <ion-item lines="none">
+          <ion-icon class="p-lr-16" src="/assets/icons/general/instagram.svg"></ion-icon>
+          <ion-input 
+            type="text"
+            inputmode="text"
+            formControlName="instagram"
+            [placeholder]="'component.user_settings_profile_edit.enter_instagram' | translate"
+            (ionFocus)="onInputFocus()"
+            (ionBlur)="onInputBlur()"
+          ></ion-input>
+        </ion-item>
+        <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('instagram')?.invalid && form.get('instagram')?.touched" translate>
+          other.errors.at_least
+        </div>
+      </div>
+    </div>
+    <div class="inputs-social">
+      <div class="text m-b-5"><span translate>component.user_settings_profile_edit.enter_telegram </span></div>
+      <div class="input flex-d-col d-flex justify-center m-b-20">
+        <ion-item lines="none">
+          <ion-icon class="p-lr-16" src="/assets/icons/general/telegram.svg"></ion-icon>
+          <ion-input 
+            type="text"
+            inputmode="text"
+            formControlName="telegram"
+            [placeholder]="'component.user_settings_profile_edit.enter_telegram' | translate"
+            (ionFocus)="onInputFocus()"
+            (ionBlur)="onInputBlur()">
+        </ion-input>
+        </ion-item>
+        <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('telegram')?.invalid && form.get('telegram')?.touched" translate>
+          other.errors.at_least
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <ion-button [disabled]="form.invalid" (click)="getData()" vibrate>
+      <span class="capitalize-button" translate>component.user_settings_profile_edit.save</span>
+    </ion-button>
+  </div>
+</form>

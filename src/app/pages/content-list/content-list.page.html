@@ -1,0 +1,22 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button title="particals.back_button.tips"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <div class="all-cards d-flex d-wrap justify-space-between">
+      <ng-container *ngFor="let category of categories">
+        <app-content-card
+        [title]="category.categoryTitle"
+        [subtitle]="category.categorySubtitle"
+        [lock]="category.lock"
+        [thumbnail]="category.categoryImage"
+        (click)="navigate(category)"
+      ></app-content-card>
+      </ng-container>
+    </div>
+  </app-main-layout>
+</ion-content>

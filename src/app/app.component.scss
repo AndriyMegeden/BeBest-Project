@@ -1,0 +1,14 @@
+ion-app{
+    ion-footer{
+        &.absolute{
+            position: absolute;
+            bottom: 0;
+            ion-toolbar{
+                &.footer{
+                    --border-width: 0;
+                    --background: transparent;
+                }
+            }
+        }
+    }
+}

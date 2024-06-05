@@ -1,0 +1,11 @@
+<div class="article m-b-20"  [ngClass]="{'safe--area': isIOS}" [class.system-android]="articleType === 'system' && !isIOS" [class.system-ios]="articleType === 'system' && isIOS">
+  <div class="article-text">
+    <ng-container *ngIf="articleType === 'article'">
+      <div class="data"><span>{{ createdAt | date:"MM/dd/yy" }}</span></div>
+    </ng-container>
+    
+    
+    <div class="description" [innerHtml]="description"></div>
+  </div>
+</div>
+

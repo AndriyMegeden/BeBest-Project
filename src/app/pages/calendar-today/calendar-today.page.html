@@ -1,0 +1,32 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button title="particals.back_button.calendar_title"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout [navbar]="true">
+    <div class="calendar d-flex justify-center">
+      <ng-container>
+        <app-calendar
+        [calendarId]="'today'"
+        [goalProgress]="goalProgress"
+        [$goalProgress]="$goalProgress.asObservable()"
+        (onChangeDate)="changeDate($event)"
+        ></app-calendar>
+      </ng-container>
+    </div>
+    <div class="date-title d-flex align-center">
+      <div class="month"> {{ month | translate  }} </div>
+      <div class="day"> {{ day }}  </div>
+    </div>
+    <ng-container *ngFor="let goal of currentDayGoals; let i = index">
+      <app-goal-card 
+      [goal]="goal"
+      [goalProgress]="currentDayMainGoalProgress[i]"
+      (onGetToggle)="completedGoalModal($event,currentDayMainGoalProgress[i])"
+      ></app-goal-card>
+    </ng-container>
+  </app-main-layout>
+</ion-content>

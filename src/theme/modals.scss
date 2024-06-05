@@ -1,0 +1,38 @@
+.modal-choose-category{
+  --height: 100%;
+  --max-width: 767px;
+}
+
+.modal-add-category {
+  --border-radius: 24px;
+  --height: 70%;
+  --width:100%;
+  align-items: end;
+}
+
+.modal-action{
+  --border-radius: 24px;
+  --height: 50%;
+  --width: 100%;
+  align-items: end;
+}
+
+.loading{
+  --background: var(--background);
+  --spinner-color: var(--white);
+  --min-width: 100%;
+  --min-height: 100%;
+}
+
+ion-spinner{
+  display: block;
+  margin: 50% auto;
+  --color: var(--white)
+}
+
+.modal-system-article{
+  --border-radius: 24px;
+  --height: 70%;
+  --width:100%;
+  align-items: end;
+}

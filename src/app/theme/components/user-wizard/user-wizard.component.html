@@ -1,0 +1,140 @@
+<form [formGroup]="form">
+  <div class="navbar d-flex justify-space-between align-center m-b-30">
+    <div class="icon">
+      <ion-icon [src]="currentMode.icon"></ion-icon>
+    </div>
+    <div class="title">
+      <span> {{ currentMode.title | translate }} </span>
+    </div>
+    <div class="text">
+      <span (click)="skipStep()" translate> component.user_wizard.skip_step </span>
+    </div>
+  </div>
+  <div class="inputs-wrapper" *ngIf="check('fields', 'phoneNumber')">
+    <div class="text m-b-5">
+      <span translate>component.user_wizard.phone_number</span>
+    </div>
+    <div class="input m-b-20">
+      <ion-item lines="none">
+        <ion-icon class="p-lr-16" src="/assets/icons/general/confetti.svg"></ion-icon>
+        <ion-input
+          class="m-l-10"
+          type="text"
+          inputmode="text"
+          [placeholder]="'component.user_wizard.phone_number' | translate"
+          formControlName="phoneNumber"
+          phoneMask
+        ></ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('phoneNumber')?.invalid && form.get('phoneNumber')?.touched" translate>
+        other.errors.phone_number_vaildation
+      </div>
+    </div>
+  </div>
+  <div class="upload-foto d-flex align-center" *ngIf="check('sections', 'avatar')">
+    <div class="avatar">
+      <img class="m-r-15" [src]="avatar ? avatar : '/assets/images/default-avatar.png'">
+    </div>
+    <div class="foto-button m-l-20">
+      <input type="file"  accept="image/*;capture=camera" (change)="onFileSelected($event)"/>
+      <ion-button vibrate>
+        <div class="icon">
+          <ion-icon
+            class="photo d-flex m-r-5"
+            src="/assets/icons/general/photo-avatar-button.svg"
+          ></ion-icon>
+        </div>
+        <span class="upload-span capitalize-button" translate>component.user_wizard.upload_photo</span>
+      </ion-button>
+    </div>
+  </div>
+  <div class="inputs-wrapper" *ngIf="check('fields', 'dateBirth')">
+    <div class="text m-b-5"><span translate>component.user_wizard.date_of_birth</span></div>
+    <div class="input m-b-20">
+      <ion-item lines="none">
+        <ion-icon class="p-l-16 p-r-2" src="/assets/icons/general/confetti.svg"></ion-icon>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      </ion-item>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime 
+            [cancelText]="'component.user_wizard.ion_datatime.cancel' | translate" [doneText]="'component.user_wizard.ion_datatime.done' | translate"
+            id="datetime"
+            presentation="date"
+            formControlName="dateBirth"
+            displayFormat="DD.MM.YYYY"
+            [showDefaultButtons]="true"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </div>
+  </div>
+  <div class="inputs-wrapper" *ngIf="check('fields', 'location')">
+    <div class="text m-b-5"><span translate>component.user_wizard.city_of_birth</span></div>
+    <div class="input m-b-30">
+      <ion-item lines="none">
+        <ion-icon class="p-lr-16" src="/assets/icons/general/buildings.svg"></ion-icon>
+        <ion-input 
+          type="text"
+          inputmode="text"
+          [placeholder]="'component.user_wizard.enter_country_city_of_birth' | translate"
+          formControlName="location"
+        ></ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('location')?.invalid && form.get('location')?.touched" translate>
+        other.errors.at_least
+      </div>
+    </div>
+  </div>
+  <div class="inputs-social" *ngIf="check('fields', 'facebook')">
+    <div class="text m-b-5"><span translate>component.user_wizard.enter_facebook</span></div>
+    <div class="input flex-d-col d-flex justify-center m-b-20">
+      <ion-item lines="none">
+        <ion-icon class="p-lr-16" src="/assets/icons/general/facebook.svg"></ion-icon>
+        <ion-input 
+          type="text"
+          inputmode="text"
+          [placeholder]="'component.user_wizard.enter_facebook' | translate"
+          formControlName="facebook"
+        ></ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('facebook')?.invalid && form.get('facebook')?.touched" translate>
+        other.errors.at_least
+      </div>
+    </div>
+  </div>
+  <div class="inputs-social" *ngIf="check('fields', 'instagram')">
+    <div class="text m-b-5"><span translate>component.user_wizard.enter_instagram</span></div>
+    <div class="input flex-d-col d-flex justify-center m-b-20">
+      <ion-item lines="none">
+        <ion-icon class="p-lr-16" src="/assets/icons/general/instagram.svg"></ion-icon>
+        <ion-input 
+          type="text"
+          inputmode="text"
+          [placeholder]="'component.user_wizard.enter_instagram' | translate"
+          formControlName="instagram"
+        ></ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('instagram')?.invalid && form.get('instagram')?.touched" translate>
+        other.errors.at_least
+      </div>
+    </div>
+  </div>
+  <div class="inputs-social" *ngIf="check('fields', 'telegram')">
+    <div class="text m-b-5"><span translate>component.user_wizard.enter_telegram </span></div>
+    <div class="input flex-d-col d-flex justify-center m-b-20">
+      <ion-item lines="none">
+        <ion-icon class="p-lr-16" src="/assets/icons/general/telegram.svg"></ion-icon>
+        <ion-input 
+          type="text"
+          inputmode="text"
+          [placeholder]="'component.user_wizard.enter_telegram' | translate"
+          formControlName="telegram"
+        ></ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15"  *ngIf="form.get('telegram')?.invalid && form.get('telegram')?.touched" translate>
+        other.errors.at_least
+      </div>
+    </div>
+  </div>
+</form>

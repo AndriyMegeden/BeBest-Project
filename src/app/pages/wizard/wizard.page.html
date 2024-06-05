@@ -1,0 +1,21 @@
+<div [ngClass]="{'safe--area': isIOS}" class="save">
+  <ion-content>
+    <app-main-layout>
+      <app-user-wizard
+      [page]="$currentStep.asObservable()"
+      (onFormValid)="formValid($event)"
+      (onSkipStep)="skipStep($event)"
+      (onGetData)="getData($event)"
+      ></app-user-wizard>
+    </app-main-layout>
+  </ion-content>
+</div>
+<ion-footer mode="ios">
+  <ion-toolbar class="footer">
+    <app-stepper
+    [page]="$currentStep.asObservable()"
+    [valid]="$formValid.asObservable()"
+    (onChangeStep)="changeStep($event)"
+    ></app-stepper>
+  </ion-toolbar>
+</ion-footer>

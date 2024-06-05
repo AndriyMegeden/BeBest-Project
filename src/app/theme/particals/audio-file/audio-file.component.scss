@@ -1,0 +1,124 @@
+.meditation {
+  .goals-for-today {
+    .health {
+      background: var(--dark-ocean);
+      width: 100%;
+      height: 90px;
+      border-radius: 8px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+      .health-bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--ocean);
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        ion-icon {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .health-text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0px;
+          text-align: left;
+        }
+      }
+      .health-arrow {
+        width: 65px;
+        height: 40px;
+        span {
+          color: var(--white-opacity);
+          font-family: Urbanist;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 16px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .meditation {
+    .goals-for-today {
+      .health {
+        width: 100%;
+        height: 85px;
+
+        ion-icon {
+          width: 100%;
+          height: 100%;
+        }
+        .health-bubble {
+          width: 50px;
+          height: 50px;
+
+          ion-icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .health-text {
+          span {
+            font-size: 18px;
+          }
+        }
+        .health-arrow {
+          width: 55px;
+          height: 35px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .meditation {
+    .goals-for-today {
+      .health {
+        width: 100%;
+        height: 80px;
+
+        ion-icon {
+          width: 100%;
+          height: 100%;
+        }
+        .health-bubble {
+          width: 48px;
+          height: 48px;
+
+          ion-icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+        .health-text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .health-arrow {
+          width: 50px;
+          height: 30px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

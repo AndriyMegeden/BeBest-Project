@@ -1,0 +1,7 @@
+  <div class="toggle d-flex align-center m-b-20">
+    <ng-container *ngFor="let option of options">
+      <div class="text d-flex justify-center align-center w-50" [class.active]="option === activeOption" (click)="changeValue(option)">
+        <span> {{ 'particals.list_switcher.' + option | translate }} </span>
+      </div>
+    </ng-container>
+  </div>

@@ -1,0 +1,21 @@
+<ion-header mode="ios"> 
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button 
+      title="particals.back_button.goals_view_title"
+      [controls]="true"
+      (onEdit)="edit()"
+      (onArchive)="archive()"
+      [archiveStatus]="goal.goalStatus === 'archive' ? true : false"
+      ></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <app-goal-view-progress 
+    [$goal]="$goal.asObservable()"
+    (onGetAction)="getAction($event)"
+    ></app-goal-view-progress>
+  </app-main-layout>
+</ion-content>

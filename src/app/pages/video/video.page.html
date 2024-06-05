@@ -1,0 +1,22 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button title="particals.back_button.video_title"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-video-player *ngIf="medias.length"
+  [medias]="medias"
+  ></app-video-player>
+  <app-main-layout>
+    <app-content-headline></app-content-headline>
+    <ng-container *ngFor="let media of medias; let index = index">
+      <app-video-file
+        [id]="index + 1"
+        [media]="media.media"
+        [contentName]="media.contentName"
+      ></app-video-file>
+    </ng-container>
+  </app-main-layout>
+</ion-content>

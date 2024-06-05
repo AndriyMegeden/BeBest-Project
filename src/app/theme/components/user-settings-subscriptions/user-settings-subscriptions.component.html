@@ -1,0 +1,57 @@
+<div class="subscriptions-info">
+  <div class="close-circle d-flex justify-end m-b-30" routerLink="/settings">
+    <ion-icon src="/assets/icons/general/close-circle.svg"></ion-icon>
+  </div>
+  <div class="logo d-flex justify-center m-b-40">
+    <img src="/assets/images/logo.webp">
+  </div>
+  <div class="title m-b-20">
+    <div class="d-flex justify-center">
+      <span translate>component.user_settings_subscriptions.membership</span>
+    </div>
+    <div class="d-flex justify-center">
+      <span translate>component.user_settings_subscriptions.now</span>
+    </div>
+  </div>
+  <div class="text">
+    <div class="d-flex justify-center m-b-10">
+      <span translate>component.user_settings_subscriptions.some</span>
+    </div>
+    <div class="d-flex justify-center m-b-10">
+      <span translate>component.user_settings_subscriptions.some</span>
+    </div>
+    <div class="d-flex justify-center m-b-10">
+      <span translate>component.user_settings_subscriptions.some</span>
+    </div>
+    <div class="d-flex justify-center m-b-10">
+      <span translate>component.user_settings_subscriptions.some</span>
+    </div>
+    <div class="d-flex justify-center m-b-40">
+      <span translate>component.user_settings_subscriptions.some</span>
+    </div>
+  </div>
+  <ng-container *ngIf="!subscription.pro">
+    <div class="button m-b-10">
+      <ion-list>
+          <div *ngFor="let offeringGroup of offerings | async">
+            <ion-item *ngFor="let sku of offeringGroup.skus">
+              <ion-button class="capitalize-button" slot="end" fill="outline" (click)="purchase(sku)">
+                <span>{{ 'component.user_settings_subscriptions.try'| translate }} {{ sku.product.price | number:'1.0-2' }} {{ sku.product.currencyCode }}</span>
+              </ion-button>
+            </ion-item>
+          </div>
+      </ion-list>
+    </div>
+    <div class="info m-b-20">
+      <div class="d-flex justify-center">
+        <span translate>component.user_settings_subscriptions.days</span>
+      </div>
+      <div class="d-flex justify-center m-b-20">
+        <span translate>component.user_settings_subscriptions.you</span>
+      </div>
+      <div class="restore d-flex justify-center" (click)="restore()">
+        <span translate>component.user_settings_subscriptions.restore</span>
+      </div>
+    </div>
+  </ng-container>
+</div>

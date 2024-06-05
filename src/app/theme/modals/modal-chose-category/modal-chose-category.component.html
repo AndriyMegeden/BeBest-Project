@@ -1,0 +1,23 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <app-back-button [disabled]="true" (click)="dismiss()" [title]="'particals.back_button.modal_chose_category_title'"></app-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container">
+  <div class="content-goals">
+    <ng-container *ngFor="let option of chooseCategoryModalOptions">
+      <app-goal-category 
+      [id]="option.id"
+      [value]="option.value.asObservable()"
+      [color]="option.color"
+      (onGetToggle)="getToggle($event)"
+      ></app-goal-category>
+    </ng-container>
+    <div class="button">
+      <ion-button class="capitalize-button" (click)="getData()" [disabled]="selectedOption === null" vibrate>
+        <span translate> modals.modal_chose_category.continue </span>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

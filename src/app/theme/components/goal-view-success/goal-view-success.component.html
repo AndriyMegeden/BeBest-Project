@@ -1,0 +1,57 @@
+<form [formGroup]="form">
+  <div class="upper-part d-flex justify-start">
+    <ion-icon src="/assets/icons/general/back.svg" (click)="backTo()"></ion-icon>
+  </div>
+  <div class="complete-background d-flex justify-center align-center flex-d-col">
+    <div class="trophy-container m-b-20">
+      <ion-icon src="/assets/icons/general/trophy.svg"></ion-icon>
+    </div>
+    <div class="title m-b-10">
+      <span translate>component.goal_view_success.congratulations</span>
+      <span> {{ authInfo.firstName }} 🎉</span>
+    </div>
+    <ng-container *ngIf="showProgress">
+      <div class="subtitle m-b-20">
+        <span translate>component.goal_view_success.something</span>
+      </div>
+      <div class="progress d-flex justify-space-between">
+        <div class="progress-wrapper d-flex w-100 flex-d-col justify-space-arround">
+          <div class="d-flex w-100 justify-space-between">
+            <div class="text m-b-10">
+              <span translate>component.goal_view_success.completing</span>
+            </div>
+            <div class="number">
+              <span>{{ goalProgress }} %</span>
+            </div>
+          </div>
+          <div class="strip m-b-10">
+            <div class="strip-progress" [style.width]="goalProgress + '%'"></div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showDetails">
+      <div class="progress-checkbox d-flex align-center m-b-50">
+        <ion-checkbox formControlName="showProgress" mode="ios"></ion-checkbox>
+        <div class="checkbox-text m-l-10">
+          <span translate>component.goal_view_success.social_networks</span>
+        </div>
+      </div>
+      <div class="share m-b-20">
+        <span translate>component.goal_view_success.share</span>
+      </div>
+      <div class="social d-flex justify-space-between m-b-50">
+        <ng-container *ngIf="socials">
+          <div *ngFor="let social of socials" class="icon"  (click)="changeSocial(social)" [class.active]="form.controls.socials.value.includes(social)">
+            <div class="icon-wrapper d-flex justify-center align-center">
+              <ion-icon [src]="'/assets/icons/general/' + social + '.svg'"></ion-icon>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+    <div class="button w-100 m-b-20" *ngIf="showDetails">
+      <ion-button (click)="getShare()" [disabled]="form.invalid"><span class="capitalize-button" translate vibrate>component.goal_view_success.share</span></ion-button>
+    </div>
+  </div>
+</form>

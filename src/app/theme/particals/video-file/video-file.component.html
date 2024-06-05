@@ -1,0 +1,32 @@
+<div class="video">
+  <div class="list">
+    <div class="goals-for-today">
+      <div class="health d-flex align-center m-b-20">
+        <div class="health-bubble d-flex justify-center align-center m-r-15">
+          <ion-icon
+            (click)="videoPlayingAction === 'pause' ? pause() : play()"
+            [src]="
+              '/assets/icons/general/player-' + videoPlayingAction + '.svg'
+            "
+          ></ion-icon>
+        </div>
+        <div class="d-flex align-center flex-d-col">
+          <div class="health-text">
+            <!-- <span translate>particals.video_file.article</span> -->
+            <span> {{ contentName }} </span>
+          </div>
+          <div class="health-arrow d-flex align-center justify-space-between">
+            <span translate>particals.video_file.singer</span>
+            <div class="icons m-lr-4 d-flex align-center">
+              <div class="dot m-r-4"></div>
+              <div class="eye">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+            </div>
+            <span translate>particals.video_file.viewers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

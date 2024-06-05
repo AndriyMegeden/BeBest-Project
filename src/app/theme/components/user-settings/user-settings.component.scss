@@ -1,0 +1,332 @@
+.content {
+  .title {
+    span {
+      font-family: Urbanist;
+      font-size: 31px;
+      font-weight: 700;
+      line-height: 34px;
+      color: var(--white);
+    }
+  }
+  .card {
+    width: 100%;
+    height: auto;
+    background-color: var(--ocean);
+    border-radius: 8px;
+    padding: 8px;
+    .logo {
+      ion-icon {
+        width: 52px;
+        height: 52px;
+      }
+    }
+    .text {
+      .title {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0.008em;
+        }
+      }
+      .subtitle {
+        width: auto;
+        height: auto;
+        span {
+          color: var(--white-opacity);
+          font-family: Urbanist;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.008em;
+          text-align: left;
+        }
+      }
+    }
+    .button {
+      ion-button {
+        font-family: Urbanist;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.008em;
+        --color: var(--ocean);
+        --background: var(--white);
+        min-width: 135px;
+        width: auto;
+        --border-radius: 8px;
+      }
+    }
+  }
+  .subtitle {
+    span {
+      color: var(--white-opacity);
+      font-family: Urbanist;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0.008em;
+      text-align: left;
+    }
+  }
+  ion-item {
+    border-radius: 0;
+    height: auto;
+    border: none;
+    .item-toggle {
+      width: 100%;
+    }
+    .toggle-container {
+      display: flex;
+      justify-content: end;
+      position: absolute;
+      width: 100%;
+      ion-toggle {
+        padding-left: 90%;
+      }
+    }
+  }
+  .toggle {
+    .notification-massage{
+      span{
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0.008em;
+        text-align: left;
+      }
+    }
+    .horisontal-bar {
+      width: 100%;
+      height: 1px;
+      background: var(--white-opacity);
+    }
+    .toggle-info {
+      height: 47px;
+      --background: none;
+      --padding-start: 0px;
+      --inner-padding-end: 0px;
+      --border-style: none;
+      .text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0.008em;
+          text-align: left;
+        }
+      }
+      .icon-wrapper {
+        width: 30px;
+        height: 30px;
+        ion-icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .log-out-button {
+    ion-button {
+      --background: none;
+      width: 100%;
+      height: 48px;
+      border: 1px solid var(--ocean);
+      border-radius: 12px;
+      color: var(--ocean);
+      font-family: Urbanist;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    .title {
+      span {
+        font-size: 29px;
+      }
+    }
+    .card {
+      .logo {
+        ion-icon {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .text {
+        .title {
+          span {
+            font-size: 15px;
+          }
+        }
+        .subtitle {
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      .button {
+        ion-button {
+          --padding-start: 7px;
+          --padding-end: 7px;
+          font-size: 14px;
+          min-width: 115px;
+          width: auto;
+        }
+      }
+    }
+    .subtitle {
+      span {
+        font-size: 22px;
+        line-height: 19px;
+      }
+    }
+    ion-item {
+      .toggle-container {
+        ion-toggle {
+          padding-left: 87%;
+        }
+      }
+    }
+    .toggle {
+      .notification-massage{
+        span{
+          font-size: 15px;
+        }
+      }
+      .horisontal-bar {
+        width: 100%;
+        height: 1px;
+      }
+      .toggle-info {
+        height: 47px;
+
+        .text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .icon-wrapper {
+          width: 28px;
+          height: 28px;
+          ion-icon {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .log-out-button {
+      ion-button {
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .content {
+    .title {
+      span {
+        font-size: 27px;
+      }
+    }
+    .card {
+      .logo {
+        ion-icon {
+          width: 48px;
+          height: 48px;
+        }
+      }
+      .text {
+        .title {
+          span {
+            font-size: 13px;
+          }
+        }
+        .subtitle {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: var(--white);
+          height: auto;
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+      .button {
+        ion-button {
+          --padding-start: 5px;
+          --padding-end: 5px;
+          font-size: 11px;
+          min-width: 100px;
+          width: auto;
+        }
+      }
+    }
+    .subtitle {
+      span {
+        font-size: 20px;
+        line-height: 17px;
+      }
+    }
+    ion-item {
+      .toggle-container {
+        ion-toggle {
+          padding-left: 85%;
+        }
+      }
+    }
+    .toggle {
+      .notification-massage{
+        span{
+          font-size: 12px;
+        }
+      }
+      .horisontal-bar {
+        width: 100%;
+        height: 1px;
+      }
+      .toggle-info {
+        height: 47px;
+
+        .text {
+          span {
+            font-size: 13px;
+          }
+        }
+        .icon-wrapper {
+          width: 24px;
+          height: 24px;
+          ion-icon {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .log-out-button {
+      ion-button {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,305 @@
+form {
+  height: 1000px;
+  .avatar {
+    .personal-image {
+      text-align: center;
+    }
+    .personal-image input[type="file"] {
+      display: none;
+    }
+    .personal-figure {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      .personal-figure-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
+      .personal-figcaption {
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+    .personal-figcaption {
+      cursor: pointer;
+      position: absolute;
+      top: 0px;
+      width: inherit;
+      height: inherit;
+      border-radius: 100%;
+      opacity: 1;
+    }
+    .personal-figcaption > img {
+      margin-top: 32.5px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .inputs-data {
+    .inputs-wrapper {
+      .text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+      .input {
+        .warning{
+          font-family: Urbanist;
+          color: var(--white);
+          height: auto;
+          margin-top: 10px;
+          text-align: center;
+        }
+        ion-item {
+          ion-icon {
+            width: 28px;
+            height: 28px;
+          }
+          .select {
+            width: 80%;
+          }
+          ion-datetime-button::part(native) {
+            background: none;
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+  .social {
+    .title {
+      span {
+        color: var(--white-opacity);
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0.008em;
+      }
+    }
+    .inputs-social {
+      .warning{
+        font-family: Urbanist;
+        color: var(--white);
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+          text-align: left;
+        }
+      }
+      .input {
+        ion-item {
+          ion-input {
+            ion-label {
+              color: var(--white);
+              font-family: Urbanist;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .button {
+    ion-button {
+      --background: var(--primary);
+      width: 100%;
+      height: 56px;
+      --border-radius: 12px;
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  form {
+    height: 1000px;
+
+    .avatar {
+      .personal-figure {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        .personal-figure-img {
+          width: 130px;
+          height: 130px;
+        }
+        .personal-figcaption {
+          img {
+            width: 54px;
+            height: 54px;
+          }
+        }
+      }
+    }
+    .inputs-data {
+      .inputs-wrapper {
+        .text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .input {
+          ion-item {
+            ion-icon {
+              width: 26px;
+              height: 26px;
+            }
+            .select {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+    .social {
+      .title {
+        span {
+          font-size: 18px;
+        }
+      }
+      .inputs-social {
+        .text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .input {
+          ion-item {
+            ion-input {
+              ion-label {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .button {
+      ion-button {
+        width: 100%;
+        height: 56px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  form {
+    height: 1000px;
+    .upper-part {
+      .arrow {
+        height: 22px;
+        ion-icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .title {
+        span {
+          font-size: 27px;
+        }
+      }
+    }
+    .avatar {
+      .personal-figure {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        .personal-figure-img {
+          width: 120px;
+          height: 120px;
+        }
+        .personal-figcaption {
+          img {
+            width: 44px;
+            height: 44px;
+          }
+        }
+      }
+    }
+    .inputs-data {
+      .inputs-wrapper {
+        .text {
+          span {
+            font-size: 14px;
+          }
+        }
+        .input {
+          ion-item {
+            ion-icon {
+              width: 24px;
+              height: 24px;
+            }
+            .select {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+    .social {
+      .title {
+        span {
+          font-size: 16px;
+        }
+      }
+      .inputs-social {
+        .text {
+          span {
+            font-size: 14px;
+          }
+        }
+        .input {
+          ion-item {
+            ion-input {
+              ion-label {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .button {
+      ion-button {
+        width: 100%;
+        height: 56px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

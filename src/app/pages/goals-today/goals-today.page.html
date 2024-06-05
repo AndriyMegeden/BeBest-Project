@@ -1,0 +1,33 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button title="particals.back_button.goals_today_title" [all]="true"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <ng-container *ngFor="let goal of mainGoalProgress">
+      <app-goal-category 
+        [mainPage]="true"
+        [defaultEvent]="true"
+        [defaultValue]="goal.goalCompleted"
+        [goalName]="goal.goalName"
+        [color]="goal.goalCategoryColor"
+        [id]="goal.goalCategoryName"
+        (onGetToggle)="completedGoalModal($event,goal)"
+      ></app-goal-category>
+    </ng-container>
+  </app-main-layout>
+</ion-content>
+<ion-footer mode="ios">
+  <ion-toolbar class="footer">
+    <div class="plus d-flex justify-end align-center">
+      <ion-fab>
+        <ion-fab-button class="d-flex justify-end" (click)="navigate()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,103 @@
+.calendar-wrapper {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  .month {
+    color: var(--white);
+    font-size: 20px;
+    margin-bottom: 7px;
+    font-weight: 300;
+    .arrows {
+
+      .right {
+        transform: rotate(180deg);
+      }
+      .arrow {
+        font-size: 24px;
+      }
+    }
+    .date {
+      font-weight: 600;
+    }
+  }
+
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    .day{
+      width: 50px;
+      height: 50px;
+      div{
+        ion-icon{
+          font-size: 48px;
+        }
+        button {
+          position: relative;
+          border: 1px solid var(--ocean);
+          color: var(--white);
+          cursor: pointer;
+          outline: 0;
+          background: transparent;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          justify-self: center;
+          align-self: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+          margin: 4px;
+          transition-duration: 0.2s;
+          &.today {
+            border: 1px solid var(--primary);
+          }
+          &.active{
+            background: var(--white);
+            color: var(--background);
+          }
+          .today {
+            width: 100%;
+            position: absolute;
+            height: 5px;
+            .dot {
+              background-color: var(--white);
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+            }
+          }
+    
+          &:first-child {
+            grid-column: 3;
+          }
+    
+          // &:focus {
+          //   opacity: 1;
+          //   z-index: 10;
+          //   background: var(--primary);
+          //   color: #fff;
+          //   font-weight: 600;
+          // }
+          // &.completed {
+          //   background: red;
+          // }
+    
+          .chart-container {
+            position: absolute;
+            height: 70px;
+            width: 50px;
+            top: -11px;
+            left: -6px;
+          }
+          .chart-wrapper {
+            top: 90px;
+            position: absolute;
+            width: 70px;
+            height: 67px;
+            border-radius: 100%;
+            background-color: var(--background);
+          }
+        }
+      }
+    }
+  }
+}

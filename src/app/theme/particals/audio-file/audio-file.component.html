@@ -1,0 +1,21 @@
+<div class="meditation">
+  <div class="goals-for-today">
+    <div class="health d-flex align-center justify-space-between m-b-20">
+      <div class="d-flex align-center">
+        <div class="health-bubble m-lr-20">
+          <ion-icon 
+          (click)="audioPlayingAction === 'pause' ? pause() : play()"
+          [src]="'/assets/icons/general/player-' + audioPlayingAction + '.svg'"
+          ></ion-icon>
+        </div>
+        <div class="health-text">
+          <span> {{ contentName }} </span>
+        </div>
+      </div>
+      <div class="health-arrow d-flex align-center m-lr-20">
+        <span>{{ formattedDuration }} min</span>
+      </div>
+    </div>
+  </div>
+</div>
+

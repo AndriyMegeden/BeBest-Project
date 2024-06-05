@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "644383298427",
+    "project_id": "bebest-c957a",
+    "storage_bucket": "bebest-c957a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644383298427:android:189dc8c0c7e02cf136e3de",
+        "android_client_info": {
+          "package_name": "bebest.petrishin.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhGph9JAQZF7r9mCB678ObFgWoE0LkVfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,72 @@
+ion-item {
+  display: flex;
+  align-items: center;
+  --background: none;
+  --padding-start: 0px;
+  --inner-padding-end: 0px;
+  --border-style: none;
+  --highlight-height: 0px;
+  --border-color: hsla(226, 14%, 77%, 1);
+  --highlight-color-focused: hsla(226, 14%, 77%, 1);
+  border: 1.5px solid hsla(226, 14%, 77%, 1);
+  --background: none;
+  color: var(--white);
+  border-radius: 12px;
+  height: 56px;
+  width: 100%;
+  ion-input {
+    font-family: Urbanist;
+  }
+}
+
+// removings arrows from input
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+ion-datetime {
+  &.calendar{
+    --background: none;
+    &::part(day) {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      border: 1px solid;
+      border-color: var(--ocean);
+      border-radius: 100%;
+      background: none;
+      color: var(--white);
+      width: 40px;
+      height: 40px;
+      margin: 3px;
+      // pointer-events: none;
+    }
+    &::part(today) {
+      background: var(--primary);
+    }
+    &::part(completed){
+      background: var(--primary);
+      background-image: url(../assets/icons/general/check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 1;
+      font-size: 0
+    }
+    &::part(none){
+      background: none;
+      opacity: 1;
+    }
+    --ion-color-primary: none;
+    --ion-color-step-300: none;
+  }
+}
+

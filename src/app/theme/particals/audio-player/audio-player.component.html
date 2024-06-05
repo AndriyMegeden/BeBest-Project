@@ -1,0 +1,76 @@
+<div class="audio m-b-30">
+  <div class="title d-flex justify-center m-b-60">
+    <!-- <span>content_article.audio</span> -->
+    <span> {{ audioName }} </span>
+  </div>
+  <div class="music-icon d-flex justify-center m-b-70">
+    <ion-icon src="/assets/icons/general/music-icon.svg"></ion-icon>
+  </div>
+  <div class="shair-icons d-flex justify-space-between m-b-20">
+    <ion-icon
+      src="/assets/icons/general/share-audio.svg"
+      [class.active]="share"
+      (click)="share = !share"
+    ></ion-icon>
+    <ion-icon
+      src="/assets/icons/general/playlist.svg"
+      [class.active]="list"
+      (click)="toggleList()"
+    ></ion-icon>
+  </div>
+  <div class="range m-b-30">
+    <span class="m-lr-20" slot="start"> {{ formattedCurrentTime }} </span>
+    <input
+      mode="ios"
+      id="myinput"
+      #rangeInput
+      [min]="0"
+      [value]="currentTime"
+      step="0.1"
+      [max]="duration"
+      (input)="changeCurrentTime($event)"
+      type="range"
+    />
+    <span class="m-lr-20" slot="end"> {{ formattedDuration }} </span>
+  </div>
+
+  <div class="management d-flex justify-space-between align-center">
+    <ion-icon
+      class="function2"
+      name="shuffle-outline"
+      [class.active]="mix"
+      (click)="toggleMixMode()"
+    ></ion-icon>
+
+    <ion-button mode="ios" fill="clear" class="arrow-button" (click)="prev()">
+      <ion-icon
+        class="arrow"
+        src="/assets/icons/general/rewind-back.svg"
+      ></ion-icon>
+    </ion-button>
+
+    <ion-button
+      mode="ios"
+      fill="clear"
+      class="play-button"
+      (click)="audioPlayingAction === 'pause' ? pause() : play()"
+    >
+      <ion-icon
+        class="play"
+        [src]="'/assets/icons/general/player-' + audioPlayingAction + '.svg'"
+      ></ion-icon>
+    </ion-button>
+    <ion-button mode="ios" fill="clear" class="arrow-button" (click)="next()">
+      <ion-icon
+        class="arrow"
+        src="/assets/icons/general/rewind-forward.svg"
+      ></ion-icon>
+    </ion-button>
+    <ion-icon
+      class="function"
+      src="/assets/icons/general/group-arrow.svg"
+      [class.active]="repeat"
+      (click)="toggleRepeatMode()"
+    ></ion-icon>
+  </div>
+</div>

@@ -1,0 +1,266 @@
+{
+  "auth": {
+    "send": "We send code enter here ",
+    "large": "Large Input",
+    "improve": "Be Best",
+    "make": "Make the best version of yourself",
+    "sign_in_button": "Sign In",
+    "send_button": "Send",
+    "next_button": "Next",
+    "sign_up_button": "Sign Up",
+    "sign_up_title": "Sign Up",
+    "some_text": "Some text will be here",
+    "rеcovery_password": "Password Rеcovery ",
+    "enter": "Enter your email for recovery we send you code",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "new_password": "New Password",
+    "repeat_password": "Repeat Password",
+    "or_sign_in_with": "Or sign in with",
+    "already": "Already have an account?",
+    "create": "Create new account?",
+    "forgot": "Forgot Password?",
+    "clicking": "By clicking Sign Up, I agree that I haveread and",
+    "accepted": " accepted",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "code": "Code"
+  },
+
+  "particals": {
+    "add_goal_control": {
+      "goal-text": "Hi,"
+    },
+    "back_button": {
+      "all": "All Goals",
+      "settings": "Settings",
+      "language_title": "Language",
+      "profile_title": "Profile",
+      "profile_edit_title": "Edit Profile",
+      "add_own_category_title": "Add Own Category",
+      "modal_chose_category_title": "Choose Category",
+      "confirm_action": "Confirm Action",
+      "goals_list_title": "Goals",
+      "goals_view_title": "Goal Name",
+      "goals_today_title": "Goals for Today",
+      "video_title": "Video",
+      "add_goal_title": "Create Goal",
+      "edit_goal_title": "Edit Goal",
+      "article_title": "Article",
+      "calendar_title": "Calendar",
+      "tips": "Tips for you"
+    },
+    "list_switcher": {
+      "active": "Active",
+      "archive": "Archive",
+      "i_want": "I want",
+      "i_accept_austerity": "I take austerity"
+    },
+    "video_file": {
+      "article": "Video Article Title",
+      "singer": "Polly Goodman",
+      "viewers": "260K View"
+    }
+  },
+
+  "component": {
+    "goal_card": {
+      "name": "Goal Name",
+      "task": "Goal Task:",
+      "text": "Some text will be here,",
+      "fulfill": "If fulfill:",
+      "don't_do": "If I don't do it:",
+      "calendar": "Calendar",
+      "progress": "Progress",
+      "open": "Open"
+    },
+    "goal_new_edit": {
+      "choose_category": "Choose Category",
+      "name": "Goal Name",
+      "some": "Some",
+      "goal": "Goal for the",
+      "week": "Week",
+      "month": "Month",
+      "mon": "mon",
+      "tue": "tue",
+      "wed": "wed",
+      "thu": "thu",
+      "fri": "fri",
+      "sat": "sat",
+      "sun": "sun",
+      "will_do": "I will do",
+      "complete": "If I complete",
+      "not_complete": "If I not complete",
+      "save": "Save"
+    },
+    "goal_view_progress": {
+      "task": "Goal Task:",
+      "text": "Some text will be here,",
+      "fulfill": "If fulfill:",
+      "don't_do": "If I don't do it:",
+      "calendar": "Calendar",
+      "progress": "Progress",
+      "goal_completed": "Goal Complete",
+      "goal_share": "Share"
+    },
+    "goal_view_success": {
+      "congratulations": "Congratulations",
+      "something": "Goal Complete, You got something",
+      "completing": "Completing",
+      "social_networks": "Show progress bar in social networks",
+      "share": "Share"
+    },
+    "settings": {
+      "unlock_all": "Unlock All",
+      "access": "Access all categories, content, ",
+      "more": "more goals and remove ads!",
+      "unlock": "Unlock",
+      "general": "General",
+      "notifications": "Notifications",
+      "notifications_massage": "Allow Be Best to send you notifications",
+      "checked_toggle": "Checked Toggle",
+      "language": "Language",
+      "support": "Support",
+      "who_are_we": "Who are we?",
+      "about_app": "About App",
+      "contact_us": "Contact Us",
+      "rate_app": "Rate App",
+      "log_out": "Log Out",
+      "delete_account": "Delete account"
+    },
+    "language": {
+      "search": "Search..."
+    },
+
+    "user_settings_profile": {
+      "all_target": "All-target",
+      "done": "Done",
+      "in_process": "In process",
+      "general": "General",
+      "date_of_birth": "Date of birth",
+      "city_of_birth": "City of birth",
+      "email": "Email"
+    },
+    "user_settings_profile_edit": {
+      "phone_number": "Phone Number",
+      "name": "Name",
+      "date_of_birth": "Date of birth",
+      "city_of_birth": "Country and city of birth",
+      "enter_country_city_of_birth": "Enter country and city",
+      "social_networks": "Social Networks",
+      "enter_facebook": "Enter Facebook",
+      "enter_instagram": "Enter Instagram",
+      "save": "Save",
+      "enter_telegram": "Enter Telegram"
+    },
+
+    "user_settings_subscriptions": {
+      "membership": "Try Membership",
+      "now": "Now",
+      "some": "🎉 Some Feature will be here",
+      "try": "Try It Free or",
+      "you": "You can cancel anytime",
+      "days": "14 days free trial period.",
+      "restore": "Resume shopping"
+    },
+    "user_wizard": {
+      "ion_datatime":{
+        "cancel":"Сancel",
+        "done": "Done"
+      },
+      "skip_step": "Skip Step",
+      "upload_avatar": "Upload Avatar",
+      "upload_photo": "Upload Photo",
+      "phone_number": "Phone Number",
+      "date_of_birth": "Date of birth",
+      "city_of_birth": "City of birth",
+      "enter_facebook": "Enter Facebook",
+      "enter_instagram": "Enter Instagram",
+      "enter_telegram": "Enter Telegram",
+      "enter_country_city_of_birth": "Enter country and city",
+      "social_networks": "Social Networks"
+    }
+  },
+
+  "modals": {
+    "modal_action": {
+      "you_confirm": "You are sure that you want to confirm the action",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "modal_add_category": {
+      "name": "Name Category",
+      "color": "Choose color",
+      "add": "Add"
+    },
+    "modal_chose_category": {
+      "continue": "Continue"
+    }
+  },
+
+  "layouts":{
+    "list_layout": {
+      "see_targets": "See All",
+      "you": "You not have goals now.",
+      "you_today": "You not have goals today.",
+      "create_your_goal": "Create your first goal",
+      "create_button": "Create",
+      "completed": "All your tasks are completed",
+      "goals": "Goals for today",
+      "tips": "Tips for you"
+    }
+
+  },
+  "other":{
+    "categories": {
+      "job": "Job",
+      "health": "Health",
+      "education": "Education",
+      "social": "Social Networks",
+      "money": "Money",
+      "your": "Your Option"
+    },
+    "languages": {
+      "en": "English",
+      "ua": "Ukrainian",
+      "ru": "Russian"
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "http_errors": {
+      "403": "Incorrect login or password",
+      "404": "User not exist",
+      "409": "User exist",
+      "500": "Something went wrong",
+      "429": "You have reached your daily request limit"
+    },
+    "errors": {
+      "phone_number_vaildation": "Enter a correct phone number",
+      "city_of_birth_vaildation": "Country and city of birth",
+      "at_least": "At least 4 characters",
+      "validation_firstName": "The name must have at least 3 characters",
+      "validation_email": "Enter a valid email",
+      "validation_password": "Password must match and have at least 6 characters",
+      "at_least_characters": "At least 3 characters",
+      "date": "Select due date"
+    },
+    "toast": {
+      "close": "Close",
+      "success": "Success",
+      "error": "Error"
+    }
+  }
+}

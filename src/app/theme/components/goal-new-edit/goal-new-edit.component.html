@@ -1,0 +1,176 @@
+<form [formGroup]="form" [style.height]="formHeight">
+  <div class="subtitle m-b-20">
+    <span translate>component.goal_new_edit.choose_category</span>
+  </div>
+  <div class="health d-flex align-center justify-space-between m-b-20" (click)="chooseCategory()">
+    <div class="d-flex align-center">
+      <div class="health-bubble d-flex align-center m-lr-20 ">
+        <ng-container *ngIf="categories.includes(form.get('goalCategoryName').value) else elseTemplate">
+          <div [className]="'color ' + form.get('goalCategoryColor').value">
+            <ion-icon [src]="'/assets/icons/category/' + form.get('goalCategoryName').value + '.svg'"></ion-icon>
+          </div>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <div [className]="'color ' + form.get('goalCategoryColor').value">
+            <ion-icon [src]="'/assets/icons/category/your.svg'"></ion-icon>
+          </div>
+        </ng-template>
+      </div>
+      <div class="health-text">
+        <ng-container *ngIf="!dataCreatedCategory; else elseTextTemplate">
+          <span>{{ 'other.categories.' + form.get('goalCategoryName').value | translate }}</span>
+        </ng-container>
+        <ng-template #elseTextTemplate>
+          <span> {{ dataCreatedCategory.categoryName }} </span>
+        </ng-template>
+      </div>
+    </div>
+    <div class="health-arrow m-lr-20">
+      <ion-icon src="/assets/icons/general/back-right.svg"></ion-icon>
+    </div>
+  </div>
+  <div class="inputs-wrapper">
+    <div class="text m-b-5"><span translate>component.goal_new_edit.name</span></div>
+    <div class="input m-b-20">
+      <ion-item mode="ios" position="floating" lines="none">
+        <ion-icon
+        class="p-lr-16"
+        src="/assets/icons/general/sticker-smile.svg"
+      ></ion-icon>
+        <ion-input 
+        formControlName="goalName"
+        [placeholder]="'component.goal_new_edit.name' | translate"
+        
+        >
+         
+        </ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15" *ngIf="form.get('goalName')?.invalid && form.get('goalName')?.touched">
+        <ng-container *ngIf="form.get('goalName')?.hasError('minlength')">
+          {{ 'other.errors.at_least_characters' | translate }}
+        </ng-container>
+        <!-- <ng-container *ngIf="form.get('goalName')?.hasError('maxlength')">
+          {{ 'other.errors.max_length' | translate }}
+        </ng-container> -->
+      </div>
+    </div>
+  </div>
+  <div class="inputs-wrapper">
+    <div class="text m-b-5"><span translate>component.goal_new_edit.goal</span></div>
+    <div class="input m-b-30">
+      <ion-item mode="ios" position="floating" lines="none">
+        <ion-icon class="p-lr-16" src="/assets/icons/general/calendar-date.svg"></ion-icon>
+        <ion-select 
+          [placeholder]="'component.goal_new_edit.goal' | translate"
+          class="select"
+          toggleIcon="/assets/icons/general/arrow-bottom.svg"
+          formControlName="goalTime"
+          >
+          <ng-container *ngFor="let goal of goalTime">
+            <ion-select-option [value]="goal"> {{ 'component.goal_new_edit.' + goal | translate }} </ion-select-option>
+          </ng-container>
+        </ion-select>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15" *ngIf="form.get('goalTime')?.invalid && form.get('goalTime')?.touched" translate>
+        other.errors.date
+      </div>
+    </div>
+  </div>
+  <div class="days-week d-flex align-center justify-space-arround m-b-20">
+    <ng-container *ngFor="let day of weekDays">
+      <ion-button class="days d-flex justify-center align-center" [class.active]="form.get('goalWeekDays').value.includes(day)" (click)="selectWeekDay(day)" [disabled]="action === 'edit'" vibrate>
+        <span> {{ 'component.goal_new_edit.' + day | translate }} </span>
+      </ion-button>
+    </ng-container>
+  </div>
+  <div class="inputs-wrapper">
+    <div class="text m-b-5"><span translate>component.goal_new_edit.will_do</span></div>
+    <div class="input m-b-20">
+      <ion-item mode="ios" position="floating" lines="none">
+        <ion-icon
+        class="p-lr-16"
+        src="/assets/icons/general/round-graph.svg"
+      ></ion-icon>
+        <ion-input 
+        [placeholder]="'component.goal_new_edit.will_do' | translate"
+        formControlName="goalValue"
+        (ionFocus)="onInputFocus()"
+        (ionBlur)="onInputBlur()"
+        >
+         
+        </ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15" *ngIf="form.get('goalValue')?.invalid && form.get('goalValue')?.touched">
+        <ng-container *ngIf="form.get('goalValue')?.hasError('minlength')">
+          {{ 'other.errors.at_least_characters' | translate }}
+        </ng-container>
+        <!-- <ng-container *ngIf="form.get('goalValue')?.hasError('maxlength')">
+          {{ 'other.errors.max_length_text' | translate }}
+        </ng-container> -->
+      </div>
+     
+    </div>
+  </div>
+  <div class="inputs-wrapper">
+    <div class="text m-b-5"><span translate>component.goal_new_edit.complete</span></div>
+    <div class="input m-b-20">
+      <ion-item mode="ios" position="floating" lines="none">
+        <ion-icon
+            class="p-lr-16"
+            src="/assets/icons/general/cup-star.svg"
+          ></ion-icon>
+        <ion-input 
+        [placeholder]="'component.goal_new_edit.complete' | translate"
+        formControlName="goalCompleted"
+        (ionFocus)="onInputFocus()"
+        (ionBlur)="onInputBlur()"
+        >
+          
+        </ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15" *ngIf="form.get('goalCompleted')?.invalid && form.get('goalCompleted')?.touched">
+        <ng-container *ngIf="form.get('goalCompleted')?.hasError('minlength')">
+          {{ 'other.errors.at_least_characters' | translate }}
+        </ng-container>
+        <!-- <ng-container *ngIf="form.get('goalCompleted')?.hasError('maxlength')">
+          {{ 'other.errors.max_length_text' | translate }}
+        </ng-container> -->
+      </div>
+    </div>
+  </div>
+  <div class="inputs-wrapper">
+    <div class="text m-b-5"><span translate>component.goal_new_edit.not_complete</span></div>
+    <div class="input m-b-20">
+      <ion-item mode="ios" position="floating" lines="none">
+        <ion-icon
+        class="p-lr-16"
+        src="/assets/icons/general/close-square.svg"
+      ></ion-icon>
+        <ion-input 
+        [placeholder]="'component.goal_new_edit.not_complete' | translate"
+        formControlName="goalNotCompleted"
+        (ionFocus)="onInputFocus()"
+        (ionBlur)="onInputBlur()"
+        >
+        </ion-input>
+      </ion-item>
+      <div class="warning d-flex align-end justify-start m-lr-15" *ngIf="form.get('goalNotCompleted')?.invalid && form.get('goalNotCompleted')?.touched">
+        <ng-container *ngIf="form.get('goalNotCompleted')?.hasError('minlength')">
+          {{ 'other.errors.at_least_characters' | translate }}
+        </ng-container>
+        <!-- <ng-container *ngIf="form.get('goalNotCompleted')?.hasError('maxlength')">
+          {{ 'other.errors.max_length_text' | translate }}
+        </ng-container> -->
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <ion-button [disabled]="form.invalid" (click)="getData()" vibrate>
+      <span class="capitalize-button" translate>component.goal_new_edit.save</span>
+    </ion-button>
+  </div>
+</form>
+
+
+
+

@@ -1,0 +1,21 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <div class="all-cards d-flex d-wrap justify-space-between">
+      <ng-container *ngFor="let article of articles">
+        <app-content-card
+        [title]="article.title"
+        [lock]="article.lock"
+        [thumbnail]="article.articleImage"
+        (click)="navigate(article)"
+      ></app-content-card>
+      </ng-container>
+    </div>
+  </app-main-layout>
+</ion-content>

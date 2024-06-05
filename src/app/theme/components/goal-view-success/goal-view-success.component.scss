@@ -1,0 +1,323 @@
+.upper-part {
+  position: absolute;
+  ion-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+.complete-background {
+  width: 100%;
+  height: 100%;
+  .trophy-container {
+    width: 301px;
+    height: 301px;
+    ion-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title {
+    span {
+      color: var(--white);
+      font-family: Urbanist;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+  .subtitle {
+    span {
+      color: var(--white);
+      font-family: Urbanist;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: center;
+    }
+  }
+  .progress {
+    width: 330px;
+    .progress-wrapper {
+      .strip {
+        width: 330px;
+        height: 8px;
+        border-radius: 24px;
+        background: var(--white-opacity);
+        .strip-progress {
+          z-index: 1;
+          width: 170px;
+          height: 8px;
+          border-radius: 24px;
+          background: var(--primary);
+        }
+      }
+      .text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: 0.20000000298023224px;
+          text-align: left;
+        }
+      }
+      .number {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+  .progress-checkbox {
+    ion-checkbox {
+      width: 32px;
+      height: 32px;
+      --background: none;
+      --border-color: var(--white);
+    }
+    width: 300px;
+    .checkbox-text {
+      color: var(--white);
+      font-family: Urbanist;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+  .share {
+    span {
+      color: var(--white);
+      font-family: Urbanist;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: center;
+    }
+  }
+  .social {
+    width: 230px;
+    .icon {
+      width: 68px;
+      height: 68px;
+      border: 1px solid white;
+      border-radius: 100%;
+      ion-icon {
+        width: 32px;
+        height: 32px;
+      }
+      .icon-wrapper {
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+      }
+      &.active {
+        .icon-wrapper {
+          background: #2F3951;
+        }
+      }
+    }
+  }
+  .button {
+    ion-button {
+      --border-radius: 12px;
+      --background: var(--primary);
+      width: 100%;
+      height: 56px;
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .upper-part {
+    position: absolute;
+    ion-icon {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .complete-background {
+    width: 100%;
+    height: 100%;
+    .trophy-container {
+      width: 301px;
+      height: 301px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title {
+      span {
+        font-size: 26px;
+      }
+    }
+    .subtitle {
+      span {
+        font-size: 18px;
+      }
+    }
+    .progress {
+      width: 285px;
+      .progress-wrapper {
+        .strip {
+          width: 285px;
+          height: 6px;
+
+          .strip-progress {
+            width: 170px;
+            height: 6px;
+          }
+        }
+        .text {
+          span {
+            font-size: 18px;
+          }
+        }
+        .number {
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .progress-checkbox {
+      ion-checkbox {
+        width: 30px;
+        height: 30px;
+      }
+      width: 285px;
+      .checkbox-text {
+        font-size: 14px;
+      }
+    }
+    .share {
+      span {
+        font-size: 18px;
+      }
+    }
+    .social {
+      width: 225px;
+      .icon {
+        width: 66px;
+        height: 66px;
+      }
+    }
+    .button {
+      ion-button {
+        width: 100%;
+        height: 56px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .upper-part {
+    position: absolute;
+    ion-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .complete-background {
+    width: 100%;
+    height: 100%;
+    .trophy-container {
+      width: 301px;
+      height: 301px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title {
+      span {
+        font-size: 24px;
+      }
+    }
+    .subtitle {
+      span {
+        font-size: 16px;
+      }
+    }
+    .progress {
+      width: 285px;
+      .progress-wrapper {
+        .strip {
+          width: 285px;
+          height: 6px;
+
+          .strip-progress {
+            width: 170px;
+            height: 6px;
+          }
+        }
+        .text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .number {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .progress-checkbox {
+      ion-checkbox {
+        width: 28px;
+        height: 28px;
+      }
+      width: 285px;
+      .checkbox-text {
+        font-size: 12px;
+      }
+    }
+    .share {
+      span {
+        font-size: 16px;
+      }
+    }
+    .social {
+      width: 220px;
+      .icon {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    .button {
+      ion-button {
+        width: 100%;
+        height: 56px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

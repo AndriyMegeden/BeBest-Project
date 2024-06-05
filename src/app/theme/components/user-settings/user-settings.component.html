@@ -1,0 +1,97 @@
+ <div class="content container">
+  <ng-container *ngIf="!subscription.pro">
+    <div class="card d-flex align-center justify-space-between m-b-15">
+      <div class="d-flex">
+        <div class="logo d-flex align-center m-r-10">
+          <ion-icon src="/assets/icons/general/crown.svg"></ion-icon>
+        </div>
+        <div class="text">
+          <div class="title">
+            <span translate>component.settings.unlock_all</span>
+          </div>
+          <div class="subtitle d-flex flex-d-col">
+            <span translate>component.settings.access</span>
+            <span translate>component.settings.more</span>
+          </div>
+        </div>
+      </div>
+      <div class="button" routerLink="/settings-subscriptions">
+        <ion-button class="capitalize-button" translate vibrate>component.settings.unlock</ion-button>
+      </div>
+    </div>
+  </ng-container>
+  <div class="subtitle m-b-20">
+    <span translate>component.settings.general</span>
+  </div>
+  <ion-item class="m-b-20">
+    <div class="toggle item-toggle">
+      <div class="toggle-info d-flex justify-space-between align-center">
+        <div class="text">
+          <span translate>component.settings.notifications</span>
+        </div>
+        <div class="toggle-container">
+          <ion-toggle mode="ios" [checked]="notificationStatus" [disabled]="notificationDisabled" (ionChange)="changeNotificationStatus($event)" translate>component.settings.checked_toggle</ion-toggle>
+        </div>
+      </div>
+      <div class="notification-massage m-b-15" *ngIf="notificationDisabled === true" ><span translate>component.settings.notifications_massage</span></div>
+      <div class="horisontal-bar"></div>
+    </div>
+  </ion-item>
+  <div class="toggle m-b-20" routerLink="/settings-language">
+    <div class="toggle-info d-flex justify-space-between align-center">
+      <div class="text">
+        <span translate>component.settings.language</span>
+      </div>
+      <div class="icon-wrapper">
+        <ion-icon src="/assets/icons/general/arrow.svg"></ion-icon>
+      </div>
+    </div>
+    <div class="horisontal-bar"></div>
+  </div>
+  <div class="subtitle m-b-20">
+    <span translate>component.settings.support</span>
+  </div>
+  <ng-container *ngFor="let article of systemArticle">
+    <div class="toggle m-b-20" (click)="navigate(article)">
+      <div class="toggle-info d-flex justify-space-between align-center">
+        <div class="text">
+          <span> {{ 'component.settings.' + article.key | translate }} </span>
+        </div>
+        <div class="icon-wrapper">
+          <ion-icon src="/assets/icons/general/arrow.svg"></ion-icon>
+        </div>
+      </div>
+      <div class="horisontal-bar"></div>
+    </div>
+  </ng-container>
+  <div class="toggle m-b-20" (click)="openLink(rateLink)">
+    <div class="toggle-info d-flex justify-space-between align-center">
+      <div class="text">
+        <span translate>component.settings.rate_app</span>
+      </div>
+      <div class="icon-wrapper">
+        <ion-icon src="/assets/icons/general/arrow.svg"></ion-icon>
+      </div>
+    </div>
+    <div class="horisontal-bar"></div>
+  </div>
+  <div class="log-out-button">
+    <ion-button class="capitalize-button m-b-15" (click)="deleteAccount()"
+    translate
+      vibrate>component.settings.delete_account</ion-button
+    >
+    <ion-button class="capitalize-button" (click)="logout()"
+    translate
+      vibrate>component.settings.log_out</ion-button
+    >
+  </div>
+</div>   
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,59 @@
+<div class="start">
+  <div class="d-flex justify-space-between align-center m-b-20">
+    <div class="title"><span> {{ config.title | translate }}</span></div>
+    <div class="subtitle"><span [routerLink]="config.seeAllLink" translate>layouts.list_layout.see_targets</span></div>
+  </div>
+  <ng-container *ngIf="screenGoals">
+    <div class="create-wrapper d-flex justify-space-between m-b-40">
+      <div class="create-icon">
+        <ion-icon src="/assets/icons/general/target.svg"></ion-icon>
+      </div>
+      <div class="create-info">
+        <div class="text t-span-center">
+          <span translate>layouts.list_layout.you</span> <br />
+          <span translate>layouts.list_layout.create_your_goal</span>
+        </div>
+        <div class="button d-flex justify-center">
+          <ion-button (click)="navigate()" vibrate>
+            <span class="capitalize-button" translate>layouts.list_layout.create_button</span>
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="screenProgressNoGoals">
+    <div class="create-wrapper d-flex justify-space-between m-b-40">
+      <div class="create-icon">
+        <ion-icon src="/assets/icons/general/target.svg"></ion-icon>
+      </div>
+      <div class="create-info">
+        <div class="text t-span-center">
+          <span translate>layouts.list_layout.you_today</span> <br />
+        </div>
+        <div class="button d-flex justify-center">
+          <ion-button (click)="navigate()" vibrate>
+            <span class="capitalize-button" translate>layouts.list_layout.create_button</span>
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="screenProgress">
+    <div class="create-wrapper d-flex justify-space-between m-b-40">
+      <div class="create-icon">
+        <ion-icon src="/assets/icons/general/target.svg"></ion-icon>
+      </div>
+      <div class="create-info">
+        <div class="text t-span-center">
+          <span translate>layouts.list_layout.completed</span> <br />
+        </div>
+        <div class="button d-flex justify-center">
+          <ion-button (click)="navigate()" vibrate>
+            <span class="capitalize-button" translate>layouts.list_layout.create_button</span>
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-content></ng-content>
+</div>

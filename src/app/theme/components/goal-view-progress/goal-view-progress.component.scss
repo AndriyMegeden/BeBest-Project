@@ -1,0 +1,336 @@
+.goal-name {
+  .health {
+    .color {
+      width: 37px;
+      height: 37px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ion-icon {
+        width: 23px;
+        height: 23px;
+        font-size: 27px;
+      }
+      &.purple {
+        background: var(--purple);
+      }
+      &.blue {
+        background: var(--blue);
+      }
+      &.orange {
+        background: var(--orange);
+      }
+      &.red {
+        background: var(--red);
+      }
+      &.primary {
+        background: var(--primary);
+      }
+      &.ocean {
+        background: var(--ocean);
+      }
+      &.yellow {
+        background: var(--yellow);
+      }
+      &.pink {
+        background: var(--pink);
+      }
+      &.violet {
+        background: var(--violet);
+      }
+      &.green {
+        background: var(--green);
+      }
+    }
+    .health-bubble {
+      width: 42px;
+      height: 42px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .health-text {
+      width: 80%;
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+  .text-icon {
+    .icon-wrapper {
+      width: 24px;
+      height: 24px;
+      ion-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+    }
+    .subtitle {
+      max-width: 400px;
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+  .progress {
+    .progress-wrapper {
+      .wrap-text {
+        margin-bottom: 5px;
+      }
+      .strip {
+        width: 100%;
+        height: 8px;
+        border-radius: 24px;
+        background: var(--white-opacity);
+        .strip-progress {
+          z-index: 1;
+          height: 8px;
+          border-radius: 24px;
+          background: var(--yellow);
+        }
+      }
+      .text {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+      .number {
+        span {
+          color: var(--white);
+          font-family: Urbanist;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+  .buttons {
+    .button-calendar {
+      ion-button {
+        --background: none;
+        width: 100%;
+        height: 56px;
+        border-radius: 12px;
+        border: 1px solid;
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0px;
+      }
+    }
+    .button-complete {
+      ion-button {
+        width: 100%;
+        height: 56px;
+        --background: var(--primary);
+        --border-radius: 12px;
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0px;
+        .complete-checkbox {
+          width: 24px;
+          height: 24px;
+          ion-checkbox {
+            width: 100%;
+            height: 100%;
+            --background: none;
+            --background-checked: var(--white-opacity);
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .goal-name {
+    .health {
+      .health-bubble {
+        width: 40px;
+        height: 40px;
+      }
+      .health-text {
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+    .text-icon {
+      .icon-wrapper {
+        width: 24px;
+        height: 24px;
+        ion-icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title {
+        span {
+          font-size: 16px;
+        }
+      }
+      .subtitle {
+        max-width: 350px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+    .progress {
+      .progress-wrapper {
+        .strip {
+          width: 100%;
+          height: 6px;
+
+          .strip-progress {
+            height: 6px;
+          }
+        }
+        .text {
+          span {
+            font-size: 16px;
+          }
+        }
+        .number {
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .buttons {
+      .button-calendar {
+        ion-button {
+          width: 100%;
+          height: 56px;
+          font-size: 18px;
+        }
+      }
+      .button-complete {
+        ion-button {
+          width: 100%;
+          height: 56px;
+          font-size: 18px;
+          .complete-checkbox {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .goal-name {
+    .health {
+      .health-bubble {
+        width: 37px;
+        height: 37px;
+      }
+      .health-text {
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .text-icon {
+      .icon-wrapper {
+        width: 24px;
+        height: 24px;
+        ion-icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title {
+        span {
+          font-size: 14px;
+        }
+      }
+      .subtitle {
+        max-width: 300px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .progress {
+      .progress-wrapper {
+        .strip {
+          width: 100%;
+          height: 6px;
+
+          .strip-progress {
+            height: 6px;
+          }
+        }
+        .text {
+          span {
+            font-size: 14px;
+          }
+        }
+        .number {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .buttons {
+      .button-calendar {
+        ion-button {
+          width: 100%;
+          height: 56px;
+          font-size: 16px;
+        }
+      }
+      .button-complete {
+        ion-button {
+          width: 100%;
+          height: 56px;
+          font-size: 16px;
+          .complete-checkbox {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

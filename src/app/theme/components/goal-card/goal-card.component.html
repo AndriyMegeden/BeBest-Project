@@ -1,0 +1,102 @@
+
+<div class="goal-card m-b-20">
+  <div class="health d-flex align-center justify-space-between m-b-10">
+    <div class="icon-with-text d-flex align-center ">
+      <div class="d-flex align-center">
+        <ng-container  *ngIf="categories.includes(goal.goalCategoryName) else elseTemplate">
+          <div  [className]="'color ' + goal.goalCategoryColor">
+            <ion-icon [src]="'/assets/icons/category/' + goal.goalCategoryName + '.svg'"></ion-icon>
+          </div>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <div [className]="'color ' + goal.goalCategoryColor">
+            <ion-icon [src]="'/assets/icons/category/your.svg'"></ion-icon>
+          </div>
+        </ng-template>
+       
+      </div>
+      <div class="health-text m-lr-10">
+        <span> {{ goal.goalName }} </span>
+      </div>
+    </div>
+    <ng-container *ngIf="goalProgress">
+      <ng-container *ngIf="!checkViability()">
+        <div class="health-checkbox">
+          <ion-checkbox mode="ios" [checked]="goalProgress.goalCompleted" (click)="getToggle(!goalProgress.goalCompleted)" [disabled]="this.goal.goalStatus === 'archive'"></ion-checkbox>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="text-icon d-flex m-b-10">
+    <div class="icon-wrapper">
+      <ion-icon src="/assets/icons/general/round-graph.svg" ></ion-icon>
+    </div>
+    <div class="title-subtitle-wrap">
+      <div class="title m-lr-10">
+        <span translate>component.goal_card.task</span>
+        <span class="subtitle"> {{ goal.goalValue }} </span>
+      </div>
+
+    </div>
+    
+  </div> 
+  <div class="text-icon d-flex m-b-10">
+    <div class="icon-wrapper">
+      <ion-icon src="/assets/icons/general/cup-star.svg" ></ion-icon>
+    </div>
+    <div class="title-subtitle-wrap">
+      <div class="title m-lr-10">
+        <span translate>component.goal_card.fulfill</span>
+        <span class="subtitle"> {{ goal.goalCompleted }} </span>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="text-icon d-flex m-b-10">
+    <div class="icon-wrapper">
+      <ion-icon src="/assets/icons/general/close-square.svg" ></ion-icon>
+    </div>
+    <div class="title-subtitle-wrap">
+      <div class="title m-lr-10">
+        <span translate>component.goal_card.don't_do</span>
+        <span class="subtitle"> {{ goal.goalNotCompleted }} </span>
+      </div>
+    </div>
+   
+  </div>
+  <div class="text-icon d-flex m-b-10">
+    <div class="icon-wrapper">
+      <ion-icon src="/assets/icons/general/calendar-add.svg" ></ion-icon>
+    </div>
+    <div class="title-subtitle-wrap">
+      <div class="title m-lr-10" >
+        <span (click)="navigateCalendar()" routerLink="/calendar-progress" translate>component.goal_card.calendar</span>
+      </div>
+    </div>
+   
+  </div>
+  <div class="progress d-flex justify-space-between">
+    <div class="progress-wrapper d-flex w-100 flex-d-col justify-space-arround">
+      <div class="d-flex w-100 justify-space-between">
+        <div class="text">
+          <span translate>component.goal_card.progress</span>
+        </div>
+        <div class="number">
+          <span> {{ progress }} %</span>
+        </div>
+      </div>
+      
+      <div class="strip">
+        <div class="strip-progress" [style.width]="progress + '%'"></div>
+      </div>
+    </div>
+    <div class="button m-l-10">
+      <ion-button (click)="navigate()"  vibrate>
+        <span class="capitalize-button" translate>component.goal_card.open</span>
+      </ion-button>
+    </div>
+  </div>
+</div>
+
+

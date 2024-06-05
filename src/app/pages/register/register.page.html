@@ -1,0 +1,7 @@
+<div [ngClass]="{'safe--area': isIOS}" class="save">
+  <ion-content>
+    <app-main-layout>
+      <app-auth [page]="'register'" (onGetData)="getData($event)"></app-auth>
+    </app-main-layout>
+  </ion-content>
+</div>

@@ -1,0 +1,14 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button title="particals.back_button.profile_edit_title"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <app-user-settings-profile-edit
+    (onGetData)="getData($event)"
+    ></app-user-settings-profile-edit>
+  </app-main-layout>
+</ion-content>

@@ -1,0 +1,30 @@
+ion-segment {
+  padding: 6px;
+  border-radius: 40px;
+  border-color: var(--dark);
+  background: var(--dark);
+  max-width: 500px;
+  height: 68px;
+  ion-segment-button {
+    --color-checked: var(--white);
+    --border-radius: 30px;
+    max-width: 56px;
+    max-height: 56px;
+    min-width: 56px;
+    --indicator-color: var(--primary);
+    --border-left: none;
+    --border-width: none;
+    ion-icon{
+      width: 24px;
+      height: 24px;
+      stroke: #BBBFCC;
+      color: var(--dark);
+      &.active{
+        stroke: white;
+        color: white;
+        stroke-width: 0;
+      }
+    }
+  }
+  
+}

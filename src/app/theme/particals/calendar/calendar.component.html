@@ -1,0 +1,42 @@
+<div class="calendar-wrapper">
+  <div class="month d-flex justify-space-between align-center">
+    <span class="date">{{ currentMonthName | translate }} {{ currentYear }}</span>
+    <div class="arrows">
+      <ion-icon class="arrow right" src="/assets/icons/general/arrow.svg" (click)="previousMonth()"></ion-icon>
+      <ion-icon class="arrow" src="/assets/icons/general/arrow.svg" (click)="nextMonth()"></ion-icon>
+    </div>
+  </div>
+  <div class="dates">
+    <ng-container *ngFor="let day of daysInMonth;">
+        <ng-container [ngSwitch]="checkGoalProgress(day)">
+            <div class="day" (click)="setSelectedDay(day)">
+              <div *ngSwitchCase="'chart'">
+                <button [class.active]="checkSelectedDay(day)">
+                  <time>{{ day }}</time>
+                  <div class="chart-container">
+                    <canvas [id]="calendarId +'-calendar-chart-day-' + day" width="45" height="45"></canvas>
+                  </div>
+                </button>
+              </div>
+              <div *ngSwitchCase="'completed'">
+                <ion-icon class="left arrow" src="/assets/icons/general/calendar-done.svg"></ion-icon>
+              </div>
+              <div *ngSwitchCase="'today'">
+                <button class="today" [class.active]="checkSelectedDay(day)">
+                  <time>{{ day }}</time>
+                  <div class="today d-flex justify-center align-end">
+                    <div class="dot"></div>
+                  </div>
+                </button>
+              </div>
+              <div *ngSwitchDefault>
+                <button [class.active]="checkSelectedDay(day)">
+                  {{ day }}
+                </button>
+              </div>
+            </div>
+        </ng-container>
+    </ng-container>
+  </div>
+</div>
+

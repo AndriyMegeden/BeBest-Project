@@ -1,0 +1,85 @@
+.article {
+  &.system-android{
+    padding-top: 40px;
+  }
+  &.system-ios{
+    padding-top: 70px;
+  }
+  .article-text {
+    span {
+      color: var(--white);
+      font-family: Urbanist;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0px;
+    }
+    .data {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+      }
+    }
+    .title {
+      span {
+        color: var(--white);
+        font-family: Urbanist;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0px;
+      }
+    }
+    .description {
+      color: var(--white);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .article {
+    .article-text {
+      span {
+        font-size: 16px;
+      }
+      .data {
+        span {
+          font-size: 16px;
+        }
+      }
+      .title {
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .article {
+    .article-text {
+      span {
+        font-size: 14px;
+      }
+      .data {
+        span {
+          font-size: 14px;
+        }
+      }
+      .title {
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

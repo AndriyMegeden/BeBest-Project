@@ -1,0 +1,32 @@
+<ng-container *ngIf="article; else elseTemplate">
+  <ion-header mode="ios">
+    <ion-title>
+      <app-back-button 
+        class="d-block"
+        [title]="article.title"
+        [disabled]="modal"
+        (click)="dismiss()"
+        [ngClass]="{'safe--area': isIOS}"
+        class="d-flex align-center"
+      ></app-back-button>
+    </ion-title>
+  </ion-header>
+  <ion-content>
+    <app-article-photo
+      *ngIf="articleType === 'article'"
+      [categoryImage]="article.articleImage"
+    ></app-article-photo>
+    <app-main-layout>
+      <app-content-article
+        [description]="article.description"
+        [createdAt]="article.createdAt"
+        [articleType]="articleType"
+      ></app-content-article>
+    </app-main-layout>
+  </ion-content>
+</ng-container>
+<ng-template #elseTemplate>
+  <ion-content>
+    <ion-spinner></ion-spinner>
+  </ion-content>
+</ng-template>

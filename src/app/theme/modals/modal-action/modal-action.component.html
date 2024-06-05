@@ -1,0 +1,17 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <app-back-button [disabled]="true" (click)="dismiss()" [title]="'particals.back_button.confirm_action'"></app-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="content">
+      <div class="text">
+        <span translate>modals.modal_action.you_confirm</span>
+      </div>
+      <ion-button (click)="resolve()" translate>modals.modal_action.yes</ion-button>
+      <ion-button (click)="dismiss()"translate>modals.modal_action.no</ion-button>
+    </div>
+  </div>
+</ion-content>

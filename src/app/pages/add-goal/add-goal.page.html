@@ -1,0 +1,26 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header">
+    <ion-title>
+      <app-back-button [title]="action === 'create' ? 'particals.back_button.add_goal_title' : goal.goalName"></app-back-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-main-layout>
+    <app-list-switcher
+    [selectedValue]="$selectedValue.asObservable()"
+    [options]="goalMotivations"
+    (onGetValue)="getValue($event)"
+    ></app-list-switcher>
+    <app-goal-new-edit
+    [action]="action"
+    [goal]="goal"
+    [$goalMotivation]="$selectedGoalMotivation.asObservable()"
+    [$category]="$selectedCategory.asObservable()"
+    [$createdCategory]="$createdCategory.asObservable()"
+    (onChooseCategory)="chooseCategoryModal()"
+    (onGetData)="getData($event)"
+    >
+    </app-goal-new-edit>
+  </app-main-layout>
+</ion-content>

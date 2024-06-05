@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Be Best</string>
+    <string name="title_activity_main">BeBest</string>
+    <string name="package_name">bebest.petrishin.com</string>
+    <string name="custom_url_scheme">bebest.petrishin.com</string>
+    <string name="server_client_id">644383298427-p1vgduetn1m1g3au9uea5qqj7ns2bf53.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1282185142663634</string>
+    <string name="facebook_client_token">80681a853ce5ca1079755867a9998b85</string>
+    <string name="default_notification_channel_id">be-best-notifications</string>
+</resources>
