@@ -36,7 +36,7 @@ const routes: Routes = [
     path: "main",
     loadChildren: () =>
       import("./pages/main/main.module").then((m) => m.MainPageModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       navbar: true,
       loader: true,
