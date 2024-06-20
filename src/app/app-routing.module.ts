@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
-import { AuthGuard } from "@core/auth-service/guards/auth.guard";
+// import { AuthGuard } from "@core/auth-service/guards/auth.guard";
 
 const routes: Routes = [
   // Not auth page
@@ -49,7 +49,7 @@ const routes: Routes = [
       import("./pages/calendar-progress/calendar-progress.module").then(
         (m) => m.CalendarProgressPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       loader: true,
     },
@@ -60,7 +60,7 @@ const routes: Routes = [
       import("./pages/settings-language/settings-language.module").then(
         (m) => m.SettingsLanguagePageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "settings-subscriptions",
@@ -68,7 +68,7 @@ const routes: Routes = [
       import(
         "./pages/settings-subscriptions/settings-subscriptions.module"
       ).then((m) => m.SettingsSubscriptionsPageModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "settings-profile",
@@ -76,7 +76,7 @@ const routes: Routes = [
       import("./pages/settings-profile/settings-profile.module").then(
         (m) => m.SettingsProfilePageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       navbar: true,
     },
@@ -87,7 +87,7 @@ const routes: Routes = [
       import("./pages/settings-profile-edit/settings-profile-edit.module").then(
         (m) => m.SettingsProfileEditPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "settings",
@@ -95,7 +95,7 @@ const routes: Routes = [
       import("./pages/settings/settings.module").then(
         (m) => m.SettingsPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       navbar: true,
     },
@@ -106,7 +106,7 @@ const routes: Routes = [
       import("./pages/goal-view/goal-view.module").then(
         (m) => m.GoalViewPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "goals-list",
@@ -114,7 +114,7 @@ const routes: Routes = [
       import("./pages/goals-list/goals-list.module").then(
         (m) => m.GoalsListPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "goals-today",
@@ -122,7 +122,7 @@ const routes: Routes = [
       import("./pages/goals-today/goals-today.module").then(
         (m) => m.GoalsTodayPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "add-goal",
@@ -130,7 +130,7 @@ const routes: Routes = [
       import("./pages/add-goal/add-goal.module").then(
         (m) => m.AddGoalPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "goal-complete",
@@ -138,13 +138,13 @@ const routes: Routes = [
       import("./pages/goal-complete/goal-complete.module").then(
         (m) => m.GoalCompletePageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "video",
     loadChildren: () =>
       import("./pages/video/video.module").then((m) => m.VideoPageModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       loader: true,
     },
@@ -153,7 +153,7 @@ const routes: Routes = [
     path: "article",
     loadChildren: () =>
       import("./pages/article/article.module").then((m) => m.ArticlePageModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       loader: true,
       loaderTimeOut: 700,
@@ -163,7 +163,7 @@ const routes: Routes = [
     path: "audio",
     loadChildren: () =>
       import("./pages/audio/audio.module").then((m) => m.AudioPageModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       loader: true,
     },
@@ -172,7 +172,7 @@ const routes: Routes = [
     path: "wizard",
     loadChildren: () =>
       import("./pages/wizard/wizard.module").then((m) => m.WizardPageModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: "calendar-today",
@@ -180,7 +180,7 @@ const routes: Routes = [
       import("./pages/calendar-today/calendar-today.module").then(
         (m) => m.CalendarTodayPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       navbar: true,
       loader: true,
@@ -192,7 +192,7 @@ const routes: Routes = [
       import("./pages/content-list/content-list.module").then(
         (m) => m.ContentListPageModule
       ),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       loader: true,
     },

@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
-import { AuthGuard } from '@core/auth-service/guards/auth.guard';
+// import { AuthGuard } from '@core/auth-service/guards/auth.guard';
 // import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { ParticalsModule } from '@theme/particals/particals.module';
 import { AuthService } from '@core/auth-service/services/auth.service';
@@ -56,7 +56,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         //       }
         //     } as SocialAuthServiceConfig,
         // },
-        AuthGuard
+        // AuthGuard
     ],
     bootstrap: [AppComponent]
 })
