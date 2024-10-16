@@ -1,18 +1,23 @@
-
 <div class="content-card">
-  <div class="cards d-flex justify-space-between ">
-    <ion-icon *ngIf="lock" class="lock" src="/assets/icons/general/lock.svg"></ion-icon>
+  <div class="cards d-flex justify-space-between">
+    <ion-icon
+      *ngIf="lock"
+      class="lock"
+      src="/assets/icons/general/lock.svg"
+    ></ion-icon>
     <div>
       <div class="opacity-wrapper" *ngIf="lock">
         <div class="opacity"></div>
       </div>
-      <div class="card p-10 m-b-20 d-flex justify-space-between  align-center flex-d-col">
+      <div
+        class="card p-10 m-b-20 d-flex justify-space-between align-center flex-d-col"
+      >
         <div class="card-text d-flex justify-center">
-          <span translate> {{title | translate }} </span>
+          <span translate> {{ title | translate }} </span>
         </div>
         <div class="icon-wrapper d-flex justify-center align-center">
           <div class="icon">
-            <img [src]="thumbnail">
+            <img [src]="thumbnail" />
           </div>
         </div>
         <div class="text-wrapper d-flex justify-center align-end">
