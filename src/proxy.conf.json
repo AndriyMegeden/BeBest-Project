@@ -1,6 +1,6 @@
 {
     "/api": {
-      "target": "https://backend-be-best-61q7.vercel.app/",
+      "target": "https://backend-be-best.vercel.app",
       "secure": false,
       "changeOrigin": true
     }
