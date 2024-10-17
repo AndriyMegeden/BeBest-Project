@@ -36,58 +36,37 @@ export class RestApiService {
   public get(secure: boolean,url: string, params: HttpParams | any ,resFn?, errFn?, returnParams = false){
     const urlAdress = this.remoteApi + url;
     const reqHeaders = this.beforeRequest(secure);
-
-    const options = {
-      headers: reqHeaders,
-      params: { ...params },
-      withCredentials: true // Додаємо підтримку CORS
-    };
-
     if(!returnParams){
-      this.http.get(urlAdress, options)
+      this.http.get(urlAdress, { headers: reqHeaders, params: {...params} })
       .subscribe({
         next: (res) => resFn(res),
         error: (err) => errFn(err)
       });
     }
     else{
-      return this.http.post(urlAdress, options, { headers: reqHeaders, params: {...params} });
+      return this.http.post(urlAdress, { headers: reqHeaders, params: {...params} });
     }
   }
 
   public post<BODY>(secure: boolean,url: string, params: HttpParams | any ,body: BODY, resFn?, errFn?, returnParams = false){
     const urlAdress = this.remoteApi + url;
     const reqHeaders = this.beforeRequest(secure);
-
-    const options = {
-      headers: reqHeaders,
-      params: { ...params },
-      withCredentials: true // Додаємо підтримку CORS
-    };
-
     if(!returnParams){
-      this.http.post(urlAdress, body, options )
+      this.http.post(urlAdress, body, { headers: reqHeaders, params: {...params} })
       .subscribe({
         next: (res) => resFn(res),
         error: (err) => errFn(err)
       });
     }
     else{
-      return this.http.post(urlAdress, body, options);
+      return this.http.post(urlAdress, body, { headers: reqHeaders, params: {...params} });
     }
   }
 
   public async put<BODY>(secure: boolean,url: string,id: string, params: HttpParams | any,  body: BODY, resFn, errFn){
     const urlAdress = this.remoteApi + url + `/${id}`;
     const reqHeaders = this.beforeRequest(secure);
-
-    const options = {
-      headers: reqHeaders,
-      params: { ...params },
-      withCredentials: true // Додаємо підтримку CORS
-    };
-
-    this.http.put(urlAdress, body, options )
+    this.http.put(urlAdress, body, { headers: reqHeaders, params: {...params} })
     .subscribe({
       next: (res) => resFn(res),
       error: (err) => errFn(err)
@@ -97,22 +76,15 @@ export class RestApiService {
   public patch<BODY>(secure: boolean,url: string, params: HttpParams | any ,body: BODY, resFn?, errFn?, returnParams = false){
     const urlAdress = this.remoteApi + url;
     const reqHeaders = this.beforeRequest(secure);
-
-    const options = {
-      headers: reqHeaders,
-      params: { ...params },
-      withCredentials: true // Додаємо підтримку CORS
-    };
-
     if(!returnParams){
-      this.http.patch(urlAdress, body, options )
+      this.http.patch(urlAdress, body, { headers: reqHeaders, params: {...params} })
       .subscribe({
         next: (res) => resFn(res),
         error: (err) => errFn(err)
       });
     }
     else{
-      return this.http.post(urlAdress, body, options );
+      return this.http.post(urlAdress, body, { headers: reqHeaders, params: {...params} });
     }
   }
   
