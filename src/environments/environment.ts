@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  remoteApi: 'https://backend-be-best-61q7.vercel.app',
+  remoteApi: 'https://backend-be-best-61q7.vercel.app/',
   // socketNotificationApi: 'http://localhost:8000/notification/socket.io',
   socketConfigApi: 'http://localhost:8001/config/socket.io',
   wordpressApi: 'https://content.bebest.petrishin.com/index.php/wp-json/wp/v2',
