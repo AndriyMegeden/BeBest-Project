@@ -32,33 +32,25 @@ export class ArticlePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    // if (!this.modal) {
-    //   this.$state = this.activatedRoute.paramMap.pipe(
-    //     map(() => window.history.state)
-    //   );
-    //   this.$state.subscribe((res: any) => {
-    //     this.articleType = res.articleType;
-    //     if (this.articleType === "system") {
-    //       this.catId = res.categoryId;
-    //       this.loadSystemArticle(this.catId);
-    //     } else {
-    //       this.article = res.article;
-    //     }
-    //   });
-    // } else {
-    //   this.articleType = "system";
-    //   this.loadSystemArticle(this.categoryId);
-    // }
+    if (!this.modal) {
+      this.$state = this.activatedRoute.paramMap.pipe(
+        map(() => window.history.state)
+      );
+      this.$state.subscribe((res: any) => {
+        this.articleType = res.articleType;
+        if (this.articleType === "system") {
+          this.catId = res.categoryId;
+          this.loadSystemArticle(this.catId);
+        } else {
+          this.article = res.article;
+        }
+      });
+    } else {
+      this.articleType = "system";
+      this.loadSystemArticle(this.categoryId);
+    }
 
-    this.articleType = 'article';  // Статичний тип
-    this.article = {
-      title: 'Ваш власний заголовок статті',
-      description: 'Ваше власне описання статті. Сюди можна записати будь-який текст.',
-      articleImage: '/assets/icons/general/about_us.jpg',  // Власне зображення
-      createdAt: new Date().toISOString(),  // Поточна дата
-      lock: false  // Стаття відкрита (можна змінити на true, якщо стаття заблокована)
-    };
-
+    
     if (this.isIOS) {
       document.body.classList.add("safe--area");
     } else {
@@ -66,24 +58,24 @@ export class ArticlePage implements OnInit {
     }
   }
 
-  // loadSystemArticle(catId: number) {
-  //   this.contentService.getContentByPostId(
-  //     catId,
-  //     (res: ServerResponseArticle[]) => {
-  //       const firstArticle = res[0];
-  //       this.article = {
-  //         title: firstArticle.acf.title,
-  //         description: firstArticle.acf.description,
-  //         articleImage: firstArticle.acf.articleImage,
-  //         createdAt: firstArticle.date,
-  //         lock: !!firstArticle.acf.lock, // Преобразуем в boolean
-  //       };
-  //     },
-  //     (error) => {
-  //       // Обработка ошибок
-  //     }
-  //   );
-  // }
+  loadSystemArticle(catId: number) {
+    this.contentService.getContentByPostId(
+      catId,
+      (res: ServerResponseArticle[]) => {
+        const firstArticle = res[0];
+        this.article = {
+          title: firstArticle.acf.title,
+          description: firstArticle.acf.description,
+          articleImage: firstArticle.acf.articleImage,
+          createdAt: firstArticle.date,
+          lock: !!firstArticle.acf.lock, // Преобразуем в boolean
+        };
+      },
+      (error) => {
+        // Обработка ошибок
+      }
+    );
+  }
 
   dismiss() {
     this.modalController.dismiss();
