@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  remoteApi: 'http://localhost:3001/files/index.html',
+  remoteApi: 'https://backend-be-best-production-d485.up.railway.app',
   // socketNotificationApi: 'http://localhost:8000/notification/socket.io',
   socketConfigApi: 'http://localhost:8001/config/socket.io',
   wordpressApi: 'https://content.bebest.petrishin.com/index.php/wp-json/wp/v2',
