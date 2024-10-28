@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  remoteApi: 'https://backend-be-best-production-d485.up.railway.app',
+  remoteApi: 'https://backend-be-best.onrender.com',
 
   // socketNotificationApi: 'https://bebest.petrishin.com/notification/socket.io',
   socketConfigApi: 'https://bebest.petrishin.com/config/socket.io',
