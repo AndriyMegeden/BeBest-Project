@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  remoteApi: 'https://backend-be-best.vercel.app/api',
+  remoteApi: 'https://backend-be-best.onrender.com/api',
   // socketNotificationApi: 'https://bebest.petrishin.com/notification/socket.io',
   socketConfigApi: 'https://bebest.petrishin.com/config/socket.io',
   wordpressApi: 'https://content.bebest.petrishin.com/index.php/wp-json/wp/v2',
