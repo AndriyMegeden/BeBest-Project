@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  remoteApi: 'http://localhost:3000/api',
+  remoteApi: 'https://fd31-178-215-178-95.ngrok-free.app/api',
   // socketNotificationApi: 'https://bebest.petrishin.com/notification/socket.io',
   socketConfigApi: 'https://bebest.petrishin.com/config/socket.io',
   wordpressApi: 'https://content.bebest.petrishin.com/index.php/wp-json/wp/v2',
